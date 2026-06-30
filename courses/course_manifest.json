@@ -1,0 +1,134 @@
+{
+  "course": "JEMIX Academy",
+  "format": "H5P Course Presentation",
+  "storage_rule": "Each lesson folder stores its final H5P file as lesson.h5p",
+  "note": "Binary .h5p files must be committed via git or GitHub Web UI because the ChatGPT GitHub connector can write UTF-8 text files only.",
+  "modules": [
+    {
+      "module": "module1",
+      "title": "Основы насосной техники",
+      "lessons": [
+        {
+          "id": "1_1",
+          "title": "Введение в насосы",
+          "target_path": "courses/module1/1_1/lesson.h5p",
+          "local_file": "JEMIX_Academy_Module_01_Lesson_1_1_H5Pcom.h5p"
+        },
+        {
+          "id": "1_2",
+          "title": "Где применяются насосы",
+          "target_path": "courses/module1/1_2/lesson.h5p",
+          "local_file": "JEMIX_Academy_1_2_Gde_primenyayutsya_nasosy.h5p"
+        },
+        {
+          "id": "1_3",
+          "title": "История насосов",
+          "target_path": "courses/module1/1_3/lesson.h5p",
+          "local_file": "JEMIX_Academy_1_3_Istoriya_nasosov.h5p"
+        },
+        {
+          "id": "1_4",
+          "title": "Основные виды насосов",
+          "target_path": "courses/module1/1_4/lesson.h5p",
+          "local_file": "JEMIX_Academy_1_4_Osnovnye_vidy_nasosov.h5p"
+        },
+        {
+          "id": "1_5",
+          "title": "Ассортимент JEMIX",
+          "target_path": "courses/module1/1_5/lesson.h5p",
+          "local_file": "JEMIX_Academy_1_5_Assortiment_JEMIX.h5p"
+        },
+        {
+          "id": "final_test",
+          "title": "Итоговый тест модуля 1",
+          "target_path": "courses/module1/final_test/lesson.h5p",
+          "local_file": "JEMIX_Academy_Module_1_Final_Test.h5p"
+        }
+      ]
+    },
+    {
+      "module": "module2",
+      "title": "Гидравлика",
+      "lessons": [
+        {
+          "id": "2_1",
+          "title": "Давление, расход, напор",
+          "target_path": "courses/module2/2_1/lesson.h5p",
+          "local_file": "JEMIX_Academy_2_1_Davlenie_rashod_napor.h5p"
+        },
+        {
+          "id": "2_2",
+          "title": "Потери напора",
+          "target_path": "courses/module2/2_2/lesson.h5p",
+          "local_file": "JEMIX_Academy_2_2_Poteri_napora.h5p"
+        },
+        {
+          "id": "2_3",
+          "title": "Рабочая точка насоса",
+          "target_path": "courses/module2/2_3/lesson.h5p",
+          "local_file": "JEMIX_Academy_2_3_Rabochaya_tochka_nasosa.h5p"
+        },
+        {
+          "id": "2_4",
+          "title": "Кавитация и высота всасывания",
+          "target_path": "courses/module2/2_4/lesson.h5p",
+          "local_file": "JEMIX_Academy_2_4_Kavitaciya_i_vysota_vsasyvaniya.h5p"
+        },
+        {
+          "id": "2_5",
+          "title": "Итоговый расчётный кейс",
+          "target_path": "courses/module2/2_5/lesson.h5p",
+          "local_file": "JEMIX_Academy_2_5_Itogovy_raschetny_keys.h5p"
+        }
+      ]
+    },
+    {
+      "module": "module3",
+      "title": "Продукция JEMIX",
+      "lessons": [
+        {
+          "id": "3_1",
+          "title": "Карта ассортимента JEMIX",
+          "target_path": "courses/module3/3_1/lesson.h5p",
+          "local_file": "JEMIX_Academy_3_1_Karta_assortimenta_JEMIX.h5p"
+        },
+        {
+          "id": "3_2",
+          "title": "Автоматические насосные станции JEMIX",
+          "target_path": "courses/module3/3_2/lesson.h5p",
+          "local_file": "JEMIX_Academy_3_2_Avtomaticheskie_nasosnye_stancii.h5p"
+        },
+        {
+          "id": "3_3",
+          "title": "Поверхностные насосы JEMIX",
+          "target_path": "courses/module3/3_3/lesson.h5p",
+          "local_file": "JEMIX_Academy_3_3_Poverhnostnye_nasosy.h5p"
+        },
+        {
+          "id": "3_4",
+          "title": "Скважинные насосы JEMIX",
+          "target_path": "courses/module3/3_4/lesson.h5p",
+          "local_file": "JEMIX_Academy_3_4_Skvazhinnye_nasosy.h5p"
+        },
+        {
+          "id": "3_5_1",
+          "title": "Колодезные насосы JEMIX. Основы",
+          "target_path": "courses/module3/3_5_1/lesson.h5p",
+          "local_file": "JEMIX_Academy_3_5_1_Kolodeznye_nasosy_Osnovy.h5p"
+        },
+        {
+          "id": "3_5_2",
+          "title": "Колодезные насосы JEMIX. Подбор и практика",
+          "target_path": "courses/module3/3_5_2/lesson.h5p",
+          "local_file": "JEMIX_Academy_3_5_2_Kolodeznye_nasosy_Podbor_i_praktika.h5p"
+        },
+        {
+          "id": "3_6_1",
+          "title": "Дренажные насосы JEMIX. Основы",
+          "target_path": "courses/module3/3_6_1/lesson.h5p",
+          "local_file": "JEMIX_Academy_3_6_1_Drenazhnye_nasosy_Osnovy.h5p"
+        }
+      ]
+    }
+  ]
+}
