@@ -1,0 +1,10 @@
+site_name: JEMIX Academy
+site_description: Корпоративная академия JEMIX
+site_url: https://arromanov1985.github.io/jemix/
+theme:
+  name: material
+  language: ru
+nav:
+  - Главная: README.md
+  - Модуль 1:
+      - Урок 1.1: academy/module-01/lesson-01/lesson.md
