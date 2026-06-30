@@ -1,0 +1,14 @@
+title: "Что такое насос"
+module: 1
+lesson: 1
+duration_min: 20
+level: basic
+audience:
+  - продавцы
+  - монтажники
+  - инженеры
+format:
+  - html
+  - h5p
+  - pdf
+next_lesson: "academy/module-01/lesson-02"
