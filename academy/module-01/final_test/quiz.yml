@@ -1,0 +1,9 @@
+questions:
+  - type: single_choice
+    question: "Черновой вопрос для урока final_test."
+    answers:
+      - "Правильный ответ"
+      - "Неверный ответ 1"
+      - "Неверный ответ 2"
+      - "Неверный ответ 3"
+    correct: 0

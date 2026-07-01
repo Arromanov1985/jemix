@@ -1,0 +1,13 @@
+id: "3_12"
+title: "3_12"
+status: "scaffold"
+format: "H5P Course Presentation"
+
+objectives: []
+
+slides:
+  - type: title
+    title: "3_12"
+  - type: summary
+    title: "Итоги"
+    body: "Черновик урока."
