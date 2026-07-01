@@ -1,0 +1,27 @@
+id: "module-01-final-test"
+title: "Итоговый тест модуля 1"
+module: 1
+lesson: "final_test"
+format: "H5P Question Set / Course Presentation"
+status: "scaffold"
+
+objectives:
+  - Проверить понимание базовых понятий насосной техники.
+  - Проверить знание областей применения насосов.
+  - Подготовить к модулю 2.
+
+slides:
+  - type: title
+    title: "Итоговый тест модуля 1"
+  - type: quiz
+    title: "Вопрос 1"
+    question: "Что создаёт насос?"
+    answers:
+      - "Расход и напор"
+      - "Только свет"
+      - "Только тепло"
+      - "Только шум"
+    correct: 0
+  - type: summary
+    title: "Итоги"
+    body: "После модуля 1 слушатель должен понимать, что насос выбирается по задаче и условиям эксплуатации."
