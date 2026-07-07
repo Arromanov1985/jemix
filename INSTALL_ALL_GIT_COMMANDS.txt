@@ -1,0 +1,19 @@
+# JEMIX Academy UX v2 · modules 2-6
+#
+# Use these commands from the folder that contains this `repo_pack` directory.
+# The pack contains the canonical module 3 structure, not the earlier 5-lesson draft.
+
+git clone https://github.com/Arromanov1985/jemix.git
+cd jemix
+
+mkdir -p h5p academy
+cp -R ../repo_pack/h5p/* h5p/
+cp -R ../repo_pack/academy/module-02 academy/
+cp -R ../repo_pack/academy/module-03 academy/
+cp -R ../repo_pack/academy/module-04 academy/
+cp -R ../repo_pack/academy/module-05 academy/
+cp -R ../repo_pack/academy/module-06 academy/
+
+git add h5p academy/module-02 academy/module-03 academy/module-04 academy/module-05 academy/module-06
+git commit -m "Add JEMIX Academy UX v2 modules 2-6"
+git push origin main
