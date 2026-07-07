@@ -1,0 +1,13 @@
+# Выполнить из корня локального репозитория jemix
+
+git pull --rebase origin main
+
+# Распаковать ZIP в корень репозитория, чтобы файлы легли в academy/.../assets/cover.png
+# В Git Bash, если ZIP скачан в Downloads:
+unzip -o ~/Downloads/JEMIX_Academy_Covers_Repo_Pack.zip -d .
+
+git add academy/**/assets/cover.png
+git add COVERS_MANIFEST.txt
+
+git commit -m "Add lesson cover images"
+git push origin main
