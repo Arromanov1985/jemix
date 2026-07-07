@@ -3,8 +3,12 @@ title: "Линейка насосов JEMIX"
 module: 5
 lesson: "5_1"
 format: "H5P Course Presentation"
-status: "v1_h5p_ready"
-h5p_file: "h5p/JEMIX_Academy_5_1_Linejka_nasosov_JEMIX.h5p"
+status: "ux_v2_h5p_ready"
+h5p_file: "h5p/JEMIX_Academy_5_1_Linejka_nasosov_JEMIX_UX_Redesign_v2.h5p"
+ux_version: "v2"
+design_system:
+  font: "PT Sans"
+  layout: "JEMIX Academy UX v2"
 
 objectives:
   - Понять структуру продуктового модуля.
@@ -14,66 +18,38 @@ objectives:
   - Готовить комплектное предложение.
 
 slides:
-  - type: title
-    title: "5.1 Линейка насосов JEMIX"
-    body: "Как ориентироваться в ассортименте и переводить задачу клиента в продуктовую группу."
-  - type: image
-    title: "Ассортимент JEMIX"
-    asset: "jemix_product_family_map.png"
-  - type: image
-    title: "Как читать линейку"
-    asset: "jemix_range_logic.png"
-  - type: theory
-    title: "Главная идея продуктовой навигации"
-    body: "Ассортимент удобно читать не с названий моделей, а с задач клиента: подать воду, откачать, повысить давление, обеспечить циркуляцию или организовать канализацию."
-  - type: image
-    title: "Основные продуктовые группы"
-    asset: "jemix_groups_51.png"
+  - type: ux_title
+    title: "Линейка насосов JEMIX"
+  - type: ux_goals
+    title: "Что нужно понять"
+  - type: ux_theory
+    title: "Задача"
+  - type: ux_scheme
+    title: "Карта выбора"
+  - type: ux_map
+    title: "Вопросы продавца"
+  - type: ux_case
+    title: "Практический кейс"
+  - type: ux_dialogue
+    title: "Как это звучит"
+  - type: ux_right_wrong
+    title: "Ошибка в подборе"
+  - type: ux_red_flags
+    title: "Красные флаги"
+  - type: ux_quiz_intro
+    title: "Быстрая проверка"
   - type: quiz
-    title: "Квиз 1"
-    question: "Клиент хочет откачать воду из подвала. С какой группы начинаем?"
+    title: "Квиз"
+    question: "С какой группы начать при воде в подвале?"
     answers:
       - "Дренажные насосы"
-      - "Циркуляционные насосы"
-      - "Повышающие насосы"
-      - "Гидроаккумуляторы"
+      - "Только мощность"
+      - "Только цену"
+      - "Только бренд"
     correct: 0
-  - type: image
-    title: "Какие вопросы ведут к группе"
-    asset: "selection_by_group_51.png"
-  - type: theory
-    title: "Почему важна среда"
-    body: "Чистая вода, грязная вода, стоки и теплоноситель требуют разных продуктовых групп и разных ограничений по применению."
-  - type: quiz
-    title: "Квиз 2"
-    question: "Санузел ниже уровня канализационного стояка. Какая группа ближе?"
-    answers:
-      - "Канализационная установка / КНС"
-      - "Циркуляционный насос"
-      - "Повышающий насос"
-      - "Фильтр для воды"
-    correct: 0
-  - type: image
-    title: "Ошибки ориентации в ассортименте"
-    asset: "range_mistakes_51.png"
-  - type: image
-    title: "Как презентовать линейку клиенту"
-    asset: "complete_offer_51.png"
-  - type: image
-    title: "Что будет в модуле 5"
-    asset: "module5_path_51.png"
-  - type: case
-    title: "Кейс 1"
-    situation: "Вода есть, но напор слабый."
-    correct_solution: "После проверки входных условий рассмотреть повышающие насосы."
-  - type: case
-    title: "Кейс 2"
-    situation: "Насос для контура отопления."
-    correct_solution: "Рассмотреть циркуляционный насос."
   - type: true_false
-    title: "Проверка"
-    question: "Ориентироваться в ассортименте лучше от задачи клиента, а не от случайной модели или мощности."
+    title: "Верно / неверно"
+    question: "Ориентироваться в ассортименте лучше от задачи клиента."
     correct: true
-  - type: summary
-    title: "Итоги"
-    body: "Линейку JEMIX читаем от задачи клиента. Следующий урок: 5.2 Водоснабжение в линейке JEMIX."
+  - type: ux_summary
+    title: "Итоги урока"

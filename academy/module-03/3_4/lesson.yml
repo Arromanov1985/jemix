@@ -1,51 +1,55 @@
 id: "3.4"
-title: "Скважинные насосы JEMIX"
+title: "Скважинные насосы"
 module: 3
 lesson: "3_4"
 format: "H5P Course Presentation"
-source_catalog: "Каталог JEMIX 2026, раздел Скважинные насосы"
-status: "draft"
+status: "ux_v2_h5p_ready"
+h5p_file: "h5p/JEMIX_Academy_3_4_Skvazhinnye_nasosy_UX_Redesign_v2.h5p"
+ux_version: "v2"
+design_system:
+  font: "PT Sans"
+  layout: "JEMIX Academy UX v2"
 
 objectives:
-  - Объяснить назначение скважинных насосов.
-  - Разобрать серии СН 3, СН 3,5, СН 4, СН 4-3 и СН 4-5.
-  - Подбирать серию по диаметру скважины, расходу и напору.
-  - Понимать ограничения по чистоте воды и глубине погружения.
+  - Понять, когда клиенту нужен раздел: Скважинные насосы.
+  - Начинать подбор с задачи клиента и среды.
+  - Отличать подходящую группу от похожих решений.
+  - Задавать уточняющие вопросы до выбора модели.
+  - Объяснять клиенту логику выбора простыми словами.
 
 slides:
-  - type: title
-    title: "3.4 Скважинные насосы JEMIX"
-    subtitle: "Диаметр, расход, напор и подбор"
-  - type: text
-    title: "Назначение"
-    body: "Скважинные насосы работают погружёнными в воду и подают чистую воду из скважин и колодцев."
-  - type: table
-    title: "Серии по диаметру"
-    rows:
-      - series: "СН 3"
-        diameter: "от 85 мм"
-        nominal_flow: "2 м³/ч"
-      - series: "СН 3,5"
-        diameter: "от 98 мм"
-        nominal_flow: "2 м³/ч"
-      - series: "СН 4"
-        diameter: "от 110 мм"
-        nominal_flow: "2 м³/ч"
-      - series: "СН 4-3"
-        diameter: "от 110 мм"
-        nominal_flow: "3 м³/ч"
-      - series: "СН 4-5"
-        diameter: "от 110 мм"
-        nominal_flow: "5 м³/ч"
+  - type: ux_title
+    title: "Скважинные насосы"
+  - type: ux_goals
+    title: "Что нужно понять"
+  - type: ux_theory
+    title: "Задача"
+  - type: ux_scheme
+    title: "Карта выбора"
+  - type: ux_map
+    title: "Вопросы продавца"
+  - type: ux_case
+    title: "Практический кейс"
+  - type: ux_dialogue
+    title: "Как это звучит"
+  - type: ux_right_wrong
+    title: "Ошибка в подборе"
+  - type: ux_red_flags
+    title: "Красные флаги"
+  - type: ux_quiz_intro
+    title: "Быстрая проверка"
   - type: quiz
-    title: "Проверка"
-    question: "Что нужно проверить первым перед выбором скважинного насоса?"
+    title: "Квиз"
+    question: "Что важнее всего уточнить для темы «Скважинные насосы»?"
     answers:
-      - "Внутренний диаметр скважины"
-      - "Цвет корпуса"
-      - "Вес упаковки"
-      - "Тип отопления"
+      - "Диаметр, уровень воды и глубину установки"
+      - "Только мощность двигателя"
+      - "Только цену"
+      - "Только цвет корпуса"
     correct: 0
-  - type: summary
-    title: "Итоги"
-    body: "Скважинный насос выбирают по диаметру скважины, глубине, требуемому расходу, общему напору и длине кабеля."
+  - type: true_false
+    title: "Верно / неверно"
+    question: "Правильная группа насоса выбирается по задаче и среде клиента."
+    correct: true
+  - type: ux_summary
+    title: "Итоги урока"

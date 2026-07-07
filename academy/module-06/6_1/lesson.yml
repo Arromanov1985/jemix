@@ -1,10 +1,14 @@
 id: "6.1"
-title: "Сервис, гарантия и послепродажная поддержка"
+title: "Сервис, гарантия и поддержка"
 module: 6
 lesson: "6_1"
 format: "H5P Course Presentation"
-status: "v1_h5p_ready"
-h5p_file: "h5p/JEMIX_Academy_6_1_Servis_garantiya_i_posleprodazhnaya_podderzhka.h5p"
+status: "ux_v2_h5p_ready"
+h5p_file: "h5p/JEMIX_Academy_6_1_Servis_garantiya_i_posleprodazhnaya_podderzhka_UX_Redesign_v2.h5p"
+ux_version: "v2"
+design_system:
+  font: "PT Sans"
+  layout: "JEMIX Academy UX v2"
 
 objectives:
   - Понять роль продавца после продажи.
@@ -14,66 +18,37 @@ objectives:
   - Говорить с клиентом профессионально и без лишних обещаний.
 
 slides:
-  - type: title
-    title: "6.1 Сервис, гарантия и послепродажная поддержка"
-    body: "Как принять обращение клиента, собрать данные и корректно направить к решению."
-  - type: image
-    title: "Сервисный сценарий"
-    asset: "service_flow_61.png"
-  - type: image
-    title: "Симптомы и действия"
-    asset: "service_symptom_matrix_61.png"
-  - type: theory
-    title: "Главная идея"
-    body: "Послепродажная поддержка — это сбор фактов, базовая проверка условий и корректное направление: консультация, проверка монтажа или сервис."
-  - type: image
-    title: "Какие данные собрать у клиента"
-    asset: "client_data_61.png"
+  - type: ux_title
+    title: "Сервис, гарантия и поддержка"
+  - type: ux_goals
+    title: "Что нужно понять"
+  - type: ux_theory
+    title: "Факты"
+  - type: ux_scheme
+    title: "Карта выбора"
+  - type: ux_map
+    title: "Вопросы продавца"
+  - type: ux_case
+    title: "Практический кейс"
+  - type: ux_dialogue
+  - type: ux_right_wrong
+    title: "Ошибка в подборе"
+  - type: ux_red_flags
+    title: "Красные флаги"
+  - type: ux_quiz_intro
+    title: "Быстрая проверка"
   - type: quiz
-    title: "Квиз 1"
-    question: "Клиент говорит: «Насос не работает». Что нужно сделать сначала?"
+    title: "Квиз"
+    question: "Что сделать сначала при обращении «насос не работает»?"
     answers:
-      - "Собрать модель, условия, симптом, фото и базовые проверки"
+      - "Собрать модель, условия, симптом, фото и документы"
       - "Сразу обещать замену"
-      - "Сразу обвинить клиента"
-      - "Посоветовать снять защиту"
+      - "Игнорировать условия эксплуатации"
+      - "Советовать отключить защиту"
     correct: 0
-  - type: image
-    title: "Граница консультации"
-    asset: "service_boundaries_61.png"
-  - type: theory
-    title: "Граница ответственности"
-    body: "Продавец может помочь собрать данные и подсказать безопасные базовые проверки. Точный диагноз без осмотра и решение по гарантии требуют регламента и сервисной проверки."
-  - type: quiz
-    title: "Квиз 2"
-    question: "Клиент говорит: «Выбивает автомат, я включал несколько раз». Что правильно?"
-    answers:
-      - "Не продолжать включать и направить на проверку/в сервис"
-      - "Включать ещё чаще"
-      - "Снять защиту"
-      - "Сказать, что это точно фильтр"
-    correct: 0
-  - type: image
-    title: "Документы и подтверждения"
-    asset: "documents_61.png"
-  - type: image
-    title: "Опасные признаки"
-    asset: "danger_signs_61.png"
-  - type: case
-    title: "Кейс 1"
-    situation: "Есть запах гари от насоса."
-    correct_solution: "Остановить использование и направить в сервис."
-  - type: case
-    title: "Кейс 2"
-    situation: "Клиент жалуется на слабый напор после установки."
-    correct_solution: "Проверить фильтр, трубу, потери, клапан, источник и подбор до вывода о поломке."
-  - type: image
-    title: "Как говорить с клиентом"
-    asset: "communication_61.png"
   - type: true_false
-    title: "Проверка"
+    title: "Верно / неверно"
     question: "Без осмотра системы и насоса нельзя обещать точную причину неисправности и гарантийное решение."
     correct: true
-  - type: summary
-    title: "Итоги"
-    body: "Сначала собираем факты, документы, фото и условия. Опасные признаки требуют остановки эксплуатации и сервиса. Следующий урок: 6.2 Финальный практический сценарий продавца."
+  - type: ux_summary
+    title: "Итоги урока"
