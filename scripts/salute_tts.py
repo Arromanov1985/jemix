@@ -16,7 +16,7 @@ import hashlib
 import os
 import sys
 from pathlib import Path
-from typing import Dict, Iterable, Optional
+from typing import Dict, Iterable, Optional, Union
 
 import requests
 from dotenv import load_dotenv
@@ -33,6 +33,25 @@ def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+def env_bool(name: str, default: bool = True) -> bool:
+    raw = os.getenv(name, "").strip().lower()
+    if not raw:
+        return default
+    return raw not in {"0", "false", "no", "off"}
+
+
+def ssl_verify_setting() -> Union[bool, str]:
+    """Return requests verify setting.
+
+    SBER_SSL_VERIFY=false disables verification for local troubleshooting.
+    SBER_CA_BUNDLE=C:/path/to/cert.pem uses a custom certificate bundle.
+    """
+    ca_bundle = os.getenv("SBER_CA_BUNDLE", "").strip()
+    if ca_bundle:
+        return ca_bundle
+    return env_bool("SBER_SSL_VERIFY", True)
+
+
 def iter_ssml_files(lesson_dir: Path) -> Iterable[Path]:
     return sorted(p for p in lesson_dir.glob("slide*.ssml") if p.is_file())
 
@@ -43,7 +62,13 @@ def output_path_for(ssml_path: Path) -> Path:
     return audio_dir / f"{ssml_path.stem}.mp3"
 
 
-def synthesize_ssml(ssml: str, token: str, tts_url: str, voice: Optional[str] = None) -> bytes:
+def synthesize_ssml(
+    ssml: str,
+    token: str,
+    tts_url: str,
+    voice: Optional[str] = None,
+    verify: Union[bool, str] = True,
+) -> bytes:
     headers = {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/ssml+xml; charset=utf-8",
@@ -60,7 +85,7 @@ def synthesize_ssml(ssml: str, token: str, tts_url: str, voice: Optional[str] = 
         headers=headers,
         data=ssml.encode("utf-8"),
         timeout=120,
-        verify=True,
+        verify=verify,
     )
 
     if response.status_code >= 400:
@@ -88,6 +113,7 @@ def main() -> int:
     token = os.getenv("SBER_SALUTE_TOKEN", "").strip()
     tts_url = os.getenv("SBER_TTS_URL", DEFAULT_TTS_URL).strip() or DEFAULT_TTS_URL
     voice = os.getenv("SBER_TTS_VOICE", "").strip() or None
+    verify = ssl_verify_setting()
 
     ssml_files = list(iter_ssml_files(lesson_dir))
     if not ssml_files:
@@ -100,6 +126,10 @@ def main() -> int:
 
     print(f"Lesson: {lesson_dir}")
     print(f"SSML files: {len(ssml_files)}")
+    if verify is False:
+        print("Warning: SSL verification is disabled. Use only for local troubleshooting.")
+    elif isinstance(verify, str):
+        print(f"SSL CA bundle: {verify}")
 
     for ssml_path in ssml_files:
         ssml = read_text(ssml_path)
@@ -117,7 +147,13 @@ def main() -> int:
             continue
 
         print(f"generate: {ssml_path.name} -> {mp3_path.name}")
-        audio = synthesize_ssml(ssml, token=token, tts_url=tts_url, voice=voice)
+        audio = synthesize_ssml(
+            ssml,
+            token=token,
+            tts_url=tts_url,
+            voice=voice,
+            verify=verify,
+        )
         mp3_path.write_bytes(audio)
         hash_path.write_text(current_hash, encoding="utf-8")
 
