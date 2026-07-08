@@ -1,0 +1,6 @@
+module: 2
+lesson: 2.2
+title: Потери напора: почему насос теряет силу в системе
+status: draft
+slides: 12
+source: scripts/generate_lesson_2_2.py
