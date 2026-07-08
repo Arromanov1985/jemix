@@ -1,0 +1,6 @@
+module: 1
+lesson: 1.5
+title: Ассортимент JEMIX: как быстро найти нужную группу
+status: draft
+slides: 12
+source: scripts/generate_lesson_1_5.py
