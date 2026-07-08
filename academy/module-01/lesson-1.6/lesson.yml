@@ -1,0 +1,6 @@
+module: 1
+lesson: 1.6
+title: Практический экзамен модуля 1
+status: draft
+slides: 12
+source: scripts/generate_lesson_1_6.py
