@@ -1,0 +1,36 @@
+lesson: 2.1
+title: Давление, расход и напор простыми словами
+questions:
+  - type: single_choice
+    title: Что показывает расход?
+    options:
+      - text: Количество воды за определённое время
+        correct: true
+      - text: Цвет корпуса насоса
+        correct: false
+      - text: Материал кабеля
+        correct: false
+    feedback: Расход показывает, сколько воды проходит за единицу времени.
+  - type: single_choice
+    title: Что показывает напор?
+    options:
+      - text: Способность насоса доставить воду с учётом высоты и сопротивления
+        correct: true
+      - text: Только цену насоса
+        correct: false
+      - text: Только диаметр корпуса
+        correct: false
+    feedback: Напор связан с высотой, расстоянием и потерями в системе.
+  - type: matching
+    title: Соотнесите понятие и смысл
+    pairs:
+      - left: Расход
+        right: Сколько воды нужно
+      - left: Напор
+        right: Сможет ли насос доставить воду
+      - left: Давление
+        right: Усилие воды в системе
+  - type: true_false
+    title: Расход и давление — это одно и то же.
+    correct: false
+    feedback: Это разные параметры. Один не заменяет другой.

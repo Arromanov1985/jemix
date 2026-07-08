@@ -1,0 +1,6 @@
+module: 2
+lesson: 2.1
+title: Давление, расход и напор простыми словами
+status: draft
+slides: 12
+source: scripts/generate_lesson_2_1.py
