@@ -1,0 +1,6 @@
+module: 1
+lesson: 1.2
+title: Где применяются насосы JEMIX
+status: draft
+slides: 12
+source: scripts/generate_lesson.py

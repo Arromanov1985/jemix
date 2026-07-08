@@ -1,0 +1,24 @@
+lesson: 1.2
+title: Где применяются насосы JEMIX
+questions:
+  - type: single_choice
+    title: Что покупает клиент?
+    options:
+      - text: Самую мощную модель
+        correct: false
+      - text: Решение своей задачи
+        correct: true
+      - text: Самый дорогой насос
+        correct: false
+    feedback: Клиент чаще всего покупает решение проблемы, а не конкретную модель.
+  - type: matching
+    title: Соотнесите фразу клиента и задачу
+    pairs:
+      - left: Затопило подвал
+        right: Откачка воды
+      - left: Слабый напор
+        right: Повышение давления
+      - left: Нужно поливать участок
+        right: Полив
+      - left: Санузел в подвале
+        right: Канализация
