@@ -1,0 +1,6 @@
+module: 1
+lesson: 1.4
+title: Как за 10 секунд определить тип насоса
+status: draft
+slides: 12
+source: scripts/generate_lesson_1_4.py
