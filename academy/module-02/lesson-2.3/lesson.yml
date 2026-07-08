@@ -1,0 +1,6 @@
+module: 2
+lesson: 2.3
+title: Рабочая точка насоса
+status: draft
+slides: 12
+source: scripts/generate_lesson_2_3.py
