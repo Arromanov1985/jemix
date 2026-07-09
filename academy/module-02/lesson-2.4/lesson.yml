@@ -1,0 +1,6 @@
+module: 2
+lesson: 2.4
+title: Кавитация и высота всасывания
+status: draft
+slides: 12
+source: scripts/generate_lesson_2_4.py
