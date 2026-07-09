@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Build a branded JEMIX Academy Interactive Book prototype.
+"""Build a Brusnika compatible JEMIX Academy Interactive Book.
 
-This script creates an H5P package that targets H5P.InteractiveBook.
-It is intentionally focused on Module 1 and produces a test file for Brusnika LMS.
+The builder avoids emojis and risky special symbols in titles, metadata and UI labels,
+because Brusnika may fail with server error 500 when saving content containing them.
 
 Usage:
   python scripts/build_interactive_book.py module-01
@@ -37,11 +37,34 @@ LESSONS = [
 ]
 
 
+def safe_text(value: str) -> str:
+    replacements = {
+        "—": "-",
+        "–": "-",
+        "→": "-",
+        "←": "-",
+        "▶": "Прослушать",
+        "·": "-",
+        "•": "-",
+        "…": "...",
+        "«": "\"",
+        "»": "\"",
+        "“": "\"",
+        "”": "\"",
+        "’": "'",
+        "’": "'",
+    }
+    for old, new in replacements.items():
+        value = value.replace(old, new)
+    value = value.encode("utf-8", "ignore").decode("utf-8")
+    return value
+
+
 def strip_md(text: str) -> str:
     text = re.sub(r"^#+\s*", "", text, flags=re.M)
     text = text.replace("**", "")
     text = text.replace("---", "")
-    return text.strip()
+    return safe_text(text.strip())
 
 
 def read_slide(lesson: str, number: int) -> tuple[str, str]:
@@ -61,15 +84,18 @@ def compact_body(text: str) -> str:
     parts = [x for x in parts if x]
     if len(parts) > 3:
         parts = parts[:3]
-    return " ".join(parts)
+    return safe_text(" ".join(parts))
 
 
 def page_html(title: str, body: str, lesson_title: str, audio_path: str | None = None) -> str:
+    title = safe_text(title)
+    body = safe_text(body)
+    lesson_title = safe_text(lesson_title)
     audio = ""
     if audio_path:
         audio = f"""
         <div style=\"margin-top:22px; padding:16px; background:#eef6ff; border-left:6px solid #0080ff; border-radius:14px;\">
-          <div style=\"font-size:16px; font-weight:700; color:#1e3a8a; margin-bottom:8px;\">▶ Прослушать объяснение</div>
+          <div style=\"font-size:16px; font-weight:700; color:#1e3a8a; margin-bottom:8px;\">Прослушать объяснение</div>
           <audio controls style=\"width:100%;\"><source src=\"{audio_path}\" type=\"audio/mpeg\"></audio>
         </div>
         """
@@ -102,13 +128,16 @@ def advanced_text(text: str, title: str) -> dict:
             "library": "H5P.AdvancedText 1.1",
             "params": {"text": text},
             "subContentId": str(uuid4()),
-            "metadata": {"contentType": "Text", "license": "U", "title": title},
+            "metadata": {"contentType": "Text", "license": "U", "title": safe_text(title)},
         },
         "useSeparator": "auto",
     }
 
 
 def multichoice(question: str, correct: str, wrong: list[str]) -> dict:
+    question = safe_text(question)
+    correct = safe_text(correct)
+    wrong = [safe_text(x) for x in wrong]
     answers = [{"text": correct, "correct": True, "tipsAndFeedback": {"tip": "", "chosenFeedback": "Верно.", "notChosenFeedback": ""}}]
     for w in wrong:
         answers.append({"text": w, "correct": False, "tipsAndFeedback": {"tip": "", "chosenFeedback": "Неверно. Вернитесь к материалу выше.", "notChosenFeedback": ""}})
@@ -121,7 +150,7 @@ def multichoice(question: str, correct: str, wrong: list[str]) -> dict:
                 "answers": answers,
                 "behaviour": {"enableRetry": True, "enableSolutionsButton": True, "singlePoint": True, "randomAnswers": False},
                 "overallFeedback": [{"from": 0, "to": 100}],
-                "UI": {"checkAnswerButton": "Проверить", "submitAnswerButton": "Ответить", "showSolutionButton": "Показать ответ", "tryAgainButton": "Попробовать ещё"},
+                "UI": {"checkAnswerButton": "Проверить", "submitAnswerButton": "Ответить", "showSolutionButton": "Показать ответ", "tryAgainButton": "Попробовать еще"},
             },
             "subContentId": str(uuid4()),
             "metadata": {"contentType": "Multiple Choice", "license": "U", "title": question},
@@ -163,7 +192,7 @@ def build_chapters(content_dir: Path) -> list[dict]:
     chapters = []
     chapters.append({
         "title": "Обложка",
-        "content": [advanced_text(cover_html(), "JEMIX Academy — Модуль 1")],
+        "content": [advanced_text(cover_html(), "JEMIX Academy - Модуль 1")],
     })
     for lesson, lesson_title in LESSONS:
         blocks = []
@@ -172,17 +201,17 @@ def build_chapters(content_dir: Path) -> list[dict]:
             audio = copy_audio(lesson, i, content_dir)
             blocks.append(advanced_text(page_html(title, compact_body(body), lesson_title, audio), title))
         blocks.append(multichoice("С чего начинается правильный подбор насоса?", "С задачи клиента", ["С самой мощной модели", "С цены", "С цвета корпуса"]))
-        chapters.append({"title": lesson_title, "content": blocks})
+        chapters.append({"title": safe_text(lesson_title), "content": blocks})
     chapters.append({
         "title": "Завершение",
-        "content": [advanced_text(page_html("Модуль завершён", "Вы прошли основные темы первого модуля. Следующий шаг — проверка понимания и переход к модулю 2.", "Финал", None), "Модуль завершён")],
+        "content": [advanced_text(page_html("Модуль завершен", "Вы прошли основные темы первого модуля. Следующий шаг - проверка понимания и переход к модулю 2.", "Финал", None), "Модуль завершен")],
     })
     return chapters
 
 
 def h5p_json() -> dict:
     return {
-        "title": "JEMIX Academy — Module 1 Interactive Book",
+        "title": "JEMIX Academy Module 1 Interactive Book",
         "language": "ru",
         "mainLibrary": "H5P.InteractiveBook",
         "embedTypes": ["div"],
