@@ -7,6 +7,7 @@ on:
       - 'scripts/build_scorm_lesson_2_*.py'
       - 'scripts/build_scorm_module_02.py'
       - 'scripts/validate_scorm_module_02.py'
+      - 'scripts/check_module_02.py'
       - 'academy/module-02/**'
       - 'academy-assets/**'
       - 'voice/modules/module-02/**'
@@ -28,23 +29,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Compile builders and validator
-        run: >-
-          python -m py_compile
-          scripts/build_scorm_lesson_2_1.py
-          scripts/build_scorm_lesson_2_2.py
-          scripts/build_scorm_lesson_2_3.py
-          scripts/build_scorm_lesson_2_4.py
-          scripts/build_scorm_lesson_2_5.py
-          scripts/build_scorm_lesson_2_6.py
-          scripts/build_scorm_module_02.py
-          scripts/validate_scorm_module_02.py
-
-      - name: Build Module 2 SCORM
-        run: python scripts/build_scorm_module_02.py
-
-      - name: Validate Module 2 SCORM
-        run: python scripts/validate_scorm_module_02.py
+      - name: Run complete Module 2 readiness check
+        run: python scripts/check_module_02.py
 
       - name: Upload Module 2 SCORM
         uses: actions/upload-artifact@v4
