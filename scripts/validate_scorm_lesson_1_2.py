@@ -29,15 +29,33 @@ def fail(message: str) -> None:
     raise SystemExit(1)
 
 
+def is_mp3(path: Path) -> bool:
+    """Return True for ID3-tagged files or MPEG audio frame sync."""
+    header = path.read_bytes()[:12]
+    if header.startswith(b"ID3"):
+        return True
+    if len(header) >= 2 and header[0] == 0xFF and header[1] & 0xE0 == 0xE0:
+        return True
+    return False
+
+
+def validate_audio_file(path: Path) -> None:
+    header = path.read_bytes()[:12]
+    if header.startswith(b"RIFF") and header[8:12] == b"WAVE":
+        fail(f"audio file is WAV data with an .mp3 extension: {path.relative_to(ROOT)}")
+    if not is_mp3(path):
+        fail(f"audio file is not a recognizable MP3: {path.relative_to(ROOT)}")
+
+
 def validate_sources() -> None:
     missing = [path for path in (LOGO, PUMP) if not path.is_file()]
-    missing.extend(
-        AUDIO_DIR / f"slide{i:02d}.mp3"
-        for i in range(1, 6)
-        if not (AUDIO_DIR / f"slide{i:02d}.mp3").is_file()
-    )
+    audio_files = [AUDIO_DIR / f"slide{i:02d}.mp3" for i in range(1, 6)]
+    missing.extend(path for path in audio_files if not path.is_file())
     if missing:
         fail("missing source assets: " + ", ".join(str(p.relative_to(ROOT)) for p in missing))
+
+    for audio_file in audio_files:
+        validate_audio_file(audio_file)
 
 
 def validate_manifest(manifest_bytes: bytes, package_names: set[str]) -> None:
@@ -65,6 +83,19 @@ def validate_manifest(manifest_bytes: bytes, package_names: set[str]) -> None:
         fail("manifest references missing files: " + ", ".join(missing_declared))
 
 
+def validate_package_audio(archive: zipfile.ZipFile) -> None:
+    for index in range(1, 6):
+        name = f"audio/slide{index:02d}.mp3"
+        header = archive.read(name)[:12]
+        if header.startswith(b"RIFF") and header[8:12] == b"WAVE":
+            fail(f"packaged audio is WAV data with an .mp3 extension: {name}")
+        if not (
+            header.startswith(b"ID3")
+            or (len(header) >= 2 and header[0] == 0xFF and header[1] & 0xE0 == 0xE0)
+        ):
+            fail(f"packaged audio is not a recognizable MP3: {name}")
+
+
 def validate_package() -> None:
     if not PACKAGE.is_file():
         fail(f"package not found: {PACKAGE.relative_to(ROOT)}")
@@ -81,6 +112,7 @@ def validate_package() -> None:
                 fail("package is missing: " + ", ".join(missing))
 
             validate_manifest(archive.read("imsmanifest.xml"), names)
+            validate_package_audio(archive)
     except zipfile.BadZipFile as exc:
         fail(f"invalid ZIP archive: {exc}")
 
