@@ -7,6 +7,7 @@ on:
       - 'scripts/build_scorm_lesson_2_*.py'
       - 'scripts/build_scorm_module_02.py'
       - 'scripts/validate_scorm_module_02.py'
+      - 'scripts/validate_scorm_lessons_module_02.py'
       - 'scripts/check_module_02.py'
       - 'academy/module-02/**'
       - 'academy-assets/**'
@@ -32,10 +33,18 @@ jobs:
       - name: Run complete Module 2 readiness check
         run: python scripts/check_module_02.py
 
-      - name: Upload Module 2 SCORM
+      - name: Upload combined Module 2 SCORM
         uses: actions/upload-artifact@v4
         with:
           name: JEMIX-Module-02-SCORM
           path: dist/module-02/JEMIX_Module_02_SCORM.zip
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload standalone Module 2 lessons
+        uses: actions/upload-artifact@v4
+        with:
+          name: JEMIX-Module-02-Lessons
+          path: dist/module-02/JEMIX_Lesson_2_*_SCORM.zip
           if-no-files-found: error
           retention-days: 30
