@@ -1,0 +1,46 @@
+name: Module 2 SCORM
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/build_scorm_lesson_2_*.py'
+      - 'scripts/build_scorm_module_02.py'
+      - 'scripts/validate*module*02*.py'
+      - 'academy/module-02/**'
+      - 'academy-assets/**'
+      - 'voice/modules/module-02/**'
+      - '.github/workflows/module-02-scorm.yml'
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build Module 2 SCORM
+        run: python scripts/build_scorm_module_02.py
+
+      - name: Run Module 2 validator
+        shell: bash
+        run: |
+          set -euo pipefail
+          validator="$(find scripts -maxdepth 1 -type f \( -iname '*validate*module*02*.py' -o -iname '*validate*module_02*.py' \) | sort | head -n 1)"
+          if [ -z "$validator" ]; then
+            echo 'No Module 2 validator found in scripts/' >&2
+            exit 1
+          fi
+          python "$validator"
+
+      - name: Upload Module 2 SCORM
+        uses: actions/upload-artifact@v4
+        with:
+          name: JEMIX-Module-02-SCORM
+          path: dist/module-02/JEMIX_Module_02_SCORM.zip
+          if-no-files-found: error
