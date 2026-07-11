@@ -6,11 +6,15 @@ on:
     paths:
       - 'scripts/build_scorm_lesson_2_*.py'
       - 'scripts/build_scorm_module_02.py'
-      - 'scripts/validate*module*02*.py'
+      - 'scripts/validate_scorm_module_02.py'
       - 'academy/module-02/**'
       - 'academy-assets/**'
       - 'voice/modules/module-02/**'
       - '.github/workflows/module-02-scorm.yml'
+
+concurrency:
+  group: module-02-scorm-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build-and-validate:
@@ -24,19 +28,23 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Compile builders and validator
+        run: >-
+          python -m py_compile
+          scripts/build_scorm_lesson_2_1.py
+          scripts/build_scorm_lesson_2_2.py
+          scripts/build_scorm_lesson_2_3.py
+          scripts/build_scorm_lesson_2_4.py
+          scripts/build_scorm_lesson_2_5.py
+          scripts/build_scorm_lesson_2_6.py
+          scripts/build_scorm_module_02.py
+          scripts/validate_scorm_module_02.py
+
       - name: Build Module 2 SCORM
         run: python scripts/build_scorm_module_02.py
 
-      - name: Run Module 2 validator
-        shell: bash
-        run: |
-          set -euo pipefail
-          validator="$(find scripts -maxdepth 1 -type f \( -iname '*validate*module*02*.py' -o -iname '*validate*module_02*.py' \) | sort | head -n 1)"
-          if [ -z "$validator" ]; then
-            echo 'No Module 2 validator found in scripts/' >&2
-            exit 1
-          fi
-          python "$validator"
+      - name: Validate Module 2 SCORM
+        run: python scripts/validate_scorm_module_02.py
 
       - name: Upload Module 2 SCORM
         uses: actions/upload-artifact@v4
@@ -44,3 +52,4 @@ jobs:
           name: JEMIX-Module-02-SCORM
           path: dist/module-02/JEMIX_Module_02_SCORM.zip
           if-no-files-found: error
+          retention-days: 30
