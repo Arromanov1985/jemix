@@ -2,11 +2,11 @@
 """Build and validate JEMIX Academy Module 2 in one command.
 
 This command is intended for local use and CI. It:
-1. checks Python syntax for all Module 2 builders and validators;
+1. checks Python syntax for all Module 2 builders, validators, and report tools;
 2. builds all six standalone lesson packages and the combined SCORM package;
 3. validates every standalone lesson ZIP;
 4. validates the combined ZIP and manifest;
-5. reports optional audio coverage without failing when MP3 files are absent.
+5. writes a reproducible release report with checksums and audio coverage.
 """
 from __future__ import annotations
 
@@ -17,17 +17,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "scripts"
-AUDIO_ROOT = ROOT / "voice" / "modules" / "module-02"
+DIST = ROOT / "dist" / "module-02"
+REPORT = DIST / "module-02-release-report.json"
 
 LESSON_BUILDERS = [SCRIPTS / f"build_scorm_lesson_2_{i}.py" for i in range(1, 7)]
 MODULE_BUILDER = SCRIPTS / "build_scorm_module_02.py"
 LESSON_VALIDATOR = SCRIPTS / "validate_scorm_lessons_module_02.py"
 MODULE_VALIDATOR = SCRIPTS / "validate_scorm_module_02.py"
+REPORT_WRITER = SCRIPTS / "write_module_02_release_report.py"
 REQUIRED_SCRIPTS = [
     *LESSON_BUILDERS,
     MODULE_BUILDER,
     LESSON_VALIDATOR,
     MODULE_VALIDATOR,
+    REPORT_WRITER,
 ]
 
 
@@ -58,25 +61,12 @@ def run_script(path: Path) -> None:
         fail(f"command failed with exit code {completed.returncode}: {path.relative_to(ROOT)}")
 
 
-def audio_report() -> None:
-    total = 0
-    present = 0
-    for lesson in range(1, 7):
-        lesson_dir = AUDIO_ROOT / f"lesson-2.{lesson}" / "audio"
-        lesson_present = 0
-        for slide in range(1, 13):
-            total += 1
-            if (lesson_dir / f"slide{slide:02d}.mp3").is_file():
-                present += 1
-                lesson_present += 1
-        print(f"AUDIO: lesson 2.{lesson}: {lesson_present}/12 MP3")
-    percentage = round(present / total * 100) if total else 0
-    print(f"AUDIO TOTAL: {present}/{total} MP3 ({percentage}%)")
-    if present < total:
-        print(
-            "INFO: audio is optional for the technical build and can be added later "
-            "without changing lesson structure"
-        )
+def check_report() -> None:
+    if not REPORT.is_file():
+        fail(f"release report was not created: {REPORT.relative_to(ROOT)}")
+    if REPORT.stat().st_size == 0:
+        fail(f"release report is empty: {REPORT.relative_to(ROOT)}")
+    print(f"OK: release report created: {REPORT.relative_to(ROOT)}")
 
 
 def main() -> None:
@@ -85,8 +75,12 @@ def main() -> None:
     run_script(MODULE_BUILDER)
     run_script(LESSON_VALIDATOR)
     run_script(MODULE_VALIDATOR)
-    audio_report()
-    print("READY: all Module 2 standalone lessons and the combined SCORM package are valid")
+    run_script(REPORT_WRITER)
+    check_report()
+    print(
+        "READY: all Module 2 standalone lessons, the combined SCORM package, "
+        "and the release report are valid"
+    )
 
 
 if __name__ == "__main__":
