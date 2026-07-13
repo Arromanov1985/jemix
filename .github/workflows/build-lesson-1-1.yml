@@ -1,0 +1,20 @@
+name: Build JEMIX Lesson 1.1
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/fetch_terrawater_images.py'
+      - 'scripts/select_jemix_lesson_assets.py'
+      - 'scripts/build_scorm_lesson_1_1_with_assets.py'
+      - 'scripts/build_scorm_lesson_1_1_final.py'
+      - 'scripts/validate_scorm_lesson_1_1.py'
+      - 'academy-assets/**'
+      - 'voice/modules/module-01/lesson-1.1/audio/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on:
