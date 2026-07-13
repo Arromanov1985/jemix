@@ -1,0 +1,82 @@
+[
+  {
+    "lesson": "lesson-1.1",
+    "target": "pump-main",
+    "file": "academy-assets/module-01/lesson-1.1/pump-main.png",
+    "source_file": "насосы-jemix-fc654777.png",
+    "source_url": "https://www.terrawater.ru/images/virtuemart/category/resized/насосы-jemix_иконка_400x400.png",
+    "score": 105,
+    "width": 400,
+    "height": 253
+  },
+  {
+    "lesson": "lesson-1.1",
+    "target": "cover",
+    "file": "academy-assets/module-01/lesson-1.1/cover.png",
+    "source_file": "stp-800-1w-240cd99c.png",
+    "source_url": "https://www.terrawater.ru/images/virtuemart/category/resized/stp-800_1w_400x400.png",
+    "score": 45,
+    "width": 400,
+    "height": 400
+  },
+  {
+    "lesson": "lesson-1.2",
+    "target": "pump-main",
+    "file": "academy-assets/module-01/lesson-1.2/pump-main.png",
+    "source_file": "wc-cp0008-ключ-для-корпуса-мембраны-бф-578b5913.png",
+    "source_url": "https://www.terrawater.ru/images/virtuemart/product/resized/wc-cp0008_ключ для корпуса мембраны_бф_400x400.png",
+    "score": 45,
+    "width": 400,
+    "height": 400
+  },
+  {
+    "lesson": "lesson-1.2",
+    "target": "characteristics",
+    "file": "academy-assets/module-01/lesson-1.2/characteristics.png",
+    "source_file": "wp-15-9-25-1w-33b41004.png",
+    "source_url": "https://www.terrawater.ru/images/virtuemart/product/resized/wp-15_9-25_1w_400x400.png",
+    "score": 45,
+    "width": 400,
+    "height": 400
+  },
+  {
+    "lesson": "lesson-1.3",
+    "target": "pump-main",
+    "file": "academy-assets/module-01/lesson-1.3/pump-main.png",
+    "source_file": "wp-20-12-50-1w-99a3159a.png",
+    "source_url": "https://www.terrawater.ru/images/virtuemart/product/resized/wp-20_12-50_1w_400x400.png",
+    "score": 45,
+    "width": 400,
+    "height": 400
+  },
+  {
+    "lesson": "lesson-1.3",
+    "target": "construction",
+    "file": "academy-assets/module-01/lesson-1.3/construction.png",
+    "source_file": "stp-optima-1w-d8161f14.png",
+    "source_url": "https://www.terrawater.ru/images/virtuemart/product/resized/stp-optima_1w_400x400.png",
+    "score": 45,
+    "width": 400,
+    "height": 400
+  },
+  {
+    "lesson": "lesson-1.4",
+    "target": "surface-pump",
+    "file": "academy-assets/module-01/lesson-1.4/surface-pump.png",
+    "source_file": "stp-100-lux-1w-cf88f1b6.png",
+    "source_url": "https://www.terrawater.ru/images/virtuemart/product/resized/stp-100 lux_1w_400x400.png",
+    "score": 45,
+    "width": 400,
+    "height": 400
+  },
+  {
+    "lesson": "lesson-1.4",
+    "target": "submersible-pump",
+    "file": "academy-assets/module-01/lesson-1.4/submersible-pump.png",
+    "source_file": "stp-200-lux-1w-8b65be3b.png",
+    "source_url": "https://www.terrawater.ru/images/virtuemart/product/resized/stp-200 lux_1w_400x400.png",
+    "score": 45,
+    "width": 400,
+    "height": 400
+  }
+]
