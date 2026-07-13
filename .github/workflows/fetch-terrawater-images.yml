@@ -1,0 +1,52 @@
+name: Fetch TerraWater Images
+
+on:
+  workflow_dispatch:
+    inputs:
+      catalog_url:
+        description: TerraWater catalog URL
+        required: true
+        default: https://www.terrawater.ru/catalog/3
+      output_dir:
+        description: Repository output directory
+        required: true
+        default: academy-assets/catalog-3
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright httpx pillow
+          playwright install --with-deps chromium
+
+      - name: Collect product images
+        run: |
+          python scripts/fetch_terrawater_images.py \
+            --url "${{ inputs.catalog_url }}" \
+            --output "${{ inputs.output_dir }}"
+
+      - name: Commit collected images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${{ inputs.output_dir }}"
+          if git diff --cached --quiet; then
+            echo "No new images found"
+            exit 0
+          fi
+          git commit -m "assets: collect TerraWater catalog images"
+          git push
