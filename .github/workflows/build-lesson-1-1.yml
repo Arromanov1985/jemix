@@ -11,4 +11,4 @@ on:
       - 'scripts/build_scorm_lesson_1_1_with_assets.py'
       - 'scripts/build_scorm_lesson_1_1_final.py'
       - 'scripts/validate_scorm_lesson_1_1.py'
-      -
+     
