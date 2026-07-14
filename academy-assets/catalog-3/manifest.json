@@ -1098,6 +1098,15 @@
     "bytes": 61819
   },
   {
+    "file": "угп-10бб-5d02f5af.png",
+    "source": "https://www.terrawater.ru/images/virtuemart/product/resized/угп-10бб_400x400.png",
+    "page": "https://www.terrawater.ru/catalog/164/179",
+    "alt": "угп-10бб",
+    "width": 400,
+    "height": 400,
+    "bytes": 95695
+  },
+  {
     "file": "угп-20бб-d474c0e8.png",
     "source": "https://www.terrawater.ru/images/virtuemart/product/resized/угп-20бб_400x400.png",
     "page": "https://www.terrawater.ru/catalog/164/179",
@@ -1735,15 +1744,6 @@
     "width": 400,
     "height": 400,
     "bytes": 10819
-  },
-  {
-    "file": "middle3416-a437365a.jpg",
-    "source": "https://www.terrawater.ru/images/virtuemart/product/resized/middle3416_400x400.jpg",
-    "page": "https://www.terrawater.ru/catalog/164/192",
-    "alt": "middle3416",
-    "width": 400,
-    "height": 400,
-    "bytes": 12675
   },
   {
     "file": "middle3418-fde8f393.jpg",
