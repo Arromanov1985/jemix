@@ -1,0 +1,17 @@
+
+const slides=[{title:`Slide 01 - Что такое насос`,body:`Type ux_title Goal Объяснить базовую идею: насос не создаёт воду, а перемещает жидкость внутри системы. Plain text Здравствуйте. Начинаем первый урок Академии JEMIX.`,audio:`audio/slide01.mp3`},
+{title:`Slide 02 - Что важно понять`,body:`Type ux_goals Goal Задать четыре ключевые идеи урока. Plain text В этом уроке нужно запомнить четыре вещи. Первое: насос всегда работает как часть системы.`,audio:`audio/slide02.mp3`},
+{title:`Slide 03 - Насос работает в системе`,body:`Type ux_scheme Goal Пояснить связку источник → трасса → потребитель. Plain text Посмотрите на схему как на маршрут воды. Сначала есть источник: колодец, скважина, ёмкость или водопровод.`,audio:`audio/slide03.mp3`}];
+let current=-1;
+const app=document.getElementById('app');
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function start(){current=0;render();scormSet(10,'incomplete');}
+function next(){if(current<slides.length-1){current++;render();scormSet(Math.round(((current+1)/(slides.length+1))*100),'incomplete');}else{quiz();}}
+function prev(){if(current>0){current--;render();}}
+function cover(){app.innerHTML=`<main class="cover"><section class="coverCard"><div class="brand">JEMIX Academy</div><div class="line"></div><h1>Урок 1.1<br>Что такое насос?</h1><p>Короткий первый урок: объяснение, озвучка и мини-проверка.</p><button onclick="start()">Начать урок</button></section></main>`;}
+function render(){const s=slides[current];const p=Math.round(((current+1)/(slides.length+1))*100);app.innerHTML=`<main class="shell"><header><div><b>JEMIX Academy</b><span>Модуль 1</span></div><div class="progress"><i style="width:${p}%"></i></div><strong>${p}%</strong></header><section class="card"><div class="visual"><div class="pumpIcon"><span></span></div><div class="flow"><b>Источник</b><em></em><b>Насос</b><em></em><b>Дом</b></div></div><article><div class="tag">Учебный экран ${current+1} из ${slides.length}</div><h1>${esc(s.title)}</h1><p>${esc(s.body)}</p><div class="note"><b>Запомните:</b> насос не создает воду, а передает ей энергию.</div>${s.audio?`<div class="audio"><b>Прослушать объяснение</b><audio controls src="${s.audio}"></audio></div>`:''}</article></section><footer><button onclick="prev()" ${current===0?'disabled':''}>Назад</button><button onclick="next()">Далее</button></footer></main>`;}
+function quiz(){app.innerHTML=`<main class="shell"><header><div><b>JEMIX Academy</b><span>Проверка</span></div><div class="progress"><i style="width:90%"></i></div><strong>90%</strong></header><section class="quiz"><div class="tag">Мини-тест</div><h1>Что делает насос?</h1><button onclick="bad()">Очищает воду</button><button onclick="good()">Передает жидкости энергию</button><button onclick="bad()">Хранит воду</button><button onclick="bad()">Охлаждает воду</button><div id="fb"></div></section></main>`;}
+function good(){document.getElementById('fb').innerHTML='<div class="ok">Верно. Урок завершен.</div>';scormSet(100,'completed');setTimeout(done,900);}
+function bad(){document.getElementById('fb').innerHTML='<div class="bad">Неверно. Насос передает жидкости энергию.</div>';}
+function done(){app.innerHTML=`<main class="cover"><section class="coverCard"><div class="brand">JEMIX Academy</div><div class="line"></div><h1>Урок завершен</h1><p>Результат передан в Бруснику.</p><button onclick="scormFinish()">Завершить</button></section></main>`;}
+window.addEventListener('load',cover);
