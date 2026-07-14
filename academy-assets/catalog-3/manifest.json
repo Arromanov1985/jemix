@@ -1098,15 +1098,6 @@
     "bytes": 61819
   },
   {
-    "file": "угп-10бб-5d02f5af.png",
-    "source": "https://www.terrawater.ru/images/virtuemart/product/resized/угп-10бб_400x400.png",
-    "page": "https://www.terrawater.ru/catalog/164/179",
-    "alt": "угп-10бб",
-    "width": 400,
-    "height": 400,
-    "bytes": 95695
-  },
-  {
     "file": "угп-20бб-d474c0e8.png",
     "source": "https://www.terrawater.ru/images/virtuemart/product/resized/угп-20бб_400x400.png",
     "page": "https://www.terrawater.ru/catalog/164/179",
@@ -2563,6 +2554,15 @@
     "width": 400,
     "height": 400,
     "bytes": 21171
+  },
+  {
+    "file": "вн-4-106-32п-осн-ф-9f852701.png",
+    "source": "https://www.terrawater.ru/images/virtuemart/product/resized/вн-4-106-32п_осн_ф_400x400.png",
+    "page": "https://www.terrawater.ru/catalog/3/161",
+    "alt": "вн-4-106-32п_осн_ф",
+    "width": 400,
+    "height": 400,
+    "bytes": 49181
   },
   {
     "file": "дан-100-45-осн-ф-fbff1472.png",
