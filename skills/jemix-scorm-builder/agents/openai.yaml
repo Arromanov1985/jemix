@@ -1,0 +1,3 @@
+interface:
+  display_name: "JEMIX SCORM Builder"
+  short_description: "Builds stable JEMIX Academy SCORM 1.2 lessons"
