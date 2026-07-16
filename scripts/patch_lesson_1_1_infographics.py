@@ -16,4 +16,4 @@ except ImportError as exc:
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = ROOT / "dist" / "module-01" / "JEMIX_Academy_1_1_SCORM_20_SLIDES_LMS_READY.zip"
-DEFAULT_OUTPUT =
+DEFAULT_OUTPUT = ROOT / "dist" / "module-01" / "JEMIX_Academy_1_1_SC
