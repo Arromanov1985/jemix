@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import argparse, shutil, tempfile, zipfile
+import argparse, tempfile, zipfile
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -49,11 +49,16 @@ def main():
         if '.lesson-infographic-wrap' not in txt: css.write_text(txt+rule,encoding='utf-8')
         for n,slide in enumerate(slides,1):
             s=slide.read_text(encoding='utf-8')
-            marker='<section class="wide">'
-            block=f'<section class="wide"><div class="lesson-infographic-wrap"><img class="lesson-infographic" src="img/infographic-slide{n:02d}.png" alt="Инфографика к экрану {n}"></div>'
-            if 'lesson-infographic-wrap' not in s:
-                if marker not in s: raise SystemExit(f'Marker not found in {slide.name}')
-                s=s.replace(marker,block,1);slide.write_text(s,encoding='utf-8')
+            if 'lesson-infographic-wrap' in s: continue
+            block=f'<div class="lesson-infographic-wrap"><img class="lesson-infographic" src="img/infographic-slide{n:02d}.png" alt="Инфографика к экрану {n}"></div>'
+            markers=['<section class="wide">','<main class="content">','<main>']
+            for marker in markers:
+                if marker in s:
+                    s=s.replace(marker,marker+block,1)
+                    break
+            else:
+                raise SystemExit(f'No insertion marker found in {slide.name}')
+            slide.write_text(s,encoding='utf-8')
         man=w/'imsmanifest.xml'
         if man.exists():
             m=man.read_text(encoding='utf-8')
