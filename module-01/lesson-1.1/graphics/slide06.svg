@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Урок 1.1, слайд 06 — Где используются насосы?</title>
+  <desc id="desc">Четыре области применения насосов: водоснабжение, отопление, полив и промышленность.</desc>
+  <defs>
+    <style>
+      .h1{font:700 66px Arial,sans-serif;fill:#111827}.card-title{font:700 34px Arial,sans-serif;fill:#111827}
+      .body{font:400 28px Arial,sans-serif;fill:#303640}.red{fill:#e30613}.line{fill:none;stroke:#e30613;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-opacity=".10"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="#fff"/>
+  <rect x="58" y="48" width="116" height="116" rx="18" class="red"/>
+  <text x="116" y="126" text-anchor="middle" font-family="Arial" font-size="58" font-weight="700" fill="#fff">06</text>
+  <text x="212" y="128" class="h1">Где используются насосы?</text>
+
+  <g transform="translate(90 225)" filter="url(#shadow)">
+    <rect width="810" height="300" rx="28" fill="#fff" stroke="#d9dde3" stroke-width="3"/>
+    <circle cx="135" cy="150" r="82" fill="#fff5f5" stroke="#e30613" stroke-width="4"/>
+    <path d="M76 150 L135 96 L194 150 V214 H76Z" class="line"/>
+    <path d="M102 214 v-52 h28 v52 M142 214 v-78 h25 v78" class="line"/>
+    <text x="255" y="112" class="card-title">Водоснабжение дома и дачи</text>
+    <text x="255" y="165" class="body">Подача воды из скважины, колодца</text>
+    <text x="255" y="210" class="body">или накопительной ёмкости.</text>
+  </g>
+
+  <g transform="translate(1020 225)" filter="url(#shadow)">
+    <rect width="810" height="300" rx="28" fill="#fff" stroke="#d9dde3" stroke-width="3"/>
+    <circle cx="135" cy="150" r="82" fill="#fff5f5" stroke="#e30613" stroke-width="4"/>
+    <path d="M77 174 h116 M88 132 v84 M112 132 v84 M136 132 v84 M160 132 v84 M184 132 v84" class="line"/>
+    <path d="M88 132 q48-44 96 0" class="line"/>
+    <text x="255" y="112" class="card-title">Отопление и котельные</text>
+    <text x="255" y="165" class="body">Циркуляция теплоносителя</text>
+    <text x="255" y="210" class="body">в системе отопления.</text>
+  </g>
+
+  <g transform="translate(90 585)" filter="url(#shadow)">
+    <rect width="810" height="300" rx="28" fill="#fff" stroke="#d9dde3" stroke-width="3"/>
+    <circle cx="135" cy="150" r="82" fill="#fff5f5" stroke="#e30613" stroke-width="4"/>
+    <path d="M75 186 q28-58 56 0 t56 0" class="line"/>
+    <path d="M92 132 q18-28 36 0 M142 120 q18-28 36 0" class="line"/>
+    <circle cx="110" cy="116" r="6" fill="#53a9e8"/><circle cx="160" cy="104" r="6" fill="#53a9e8"/>
+    <text x="255" y="112" class="card-title">Полив и системы орошения</text>
+    <text x="255" y="165" class="body">Подача воды на участок, газон</text>
+    <text x="255" y="210" class="body">и сельскохозяйственные объекты.</text>
+  </g>
+
+  <g transform="translate(1020 585)" filter="url(#shadow)">
+    <rect width="810" height="300" rx="28" fill="#fff" stroke="#d9dde3" stroke-width="3"/>
+    <circle cx="135" cy="150" r="82" fill="#fff5f5" stroke="#e30613" stroke-width="4"/>
+    <path d="M78 205 V124 H115 V205 M126 205 V92 H166 V205 M178 205 V142 H194 V205" class="line"/>
+    <path d="M78 124 l37-28 v28 M126 92 l40-26 v26" class="line"/>
+    <text x="255" y="112" class="card-title">Промышленность и производство</text>
+    <text x="255" y="165" class="body">Перекачивание воды и технических</text>
+    <text x="255" y="210" class="body">жидкостей в технологических процессах.</text>
+  </g>
+
+  <rect x="250" y="930" width="1420" height="90" rx="24" fill="#fff" stroke="#e30613" stroke-width="3"/>
+  <circle cx="320" cy="975" r="28" fill="#fff4f4" stroke="#e30613" stroke-width="3"/>
+  <path d="M309 976 l9 10 21-25" class="line"/>
+  <text x="375" y="987" class="body">Насосы применяются везде, где нужно перемещать жидкость и создавать напор.</text>
+</svg>
