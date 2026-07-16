@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import shutil
-import sys
 import tempfile
 import zipfile
 from pathlib import Path
@@ -16,4 +16,4 @@ except ImportError as exc:
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = ROOT / "dist" / "module-01" / "JEMIX_Academy_1_1_SCORM_20_SLIDES_LMS_READY.zip"
-DEFAULT_OUTPUT = ROOT / "dist" / "module-01
+DEFAULT_OUTPUT =
