@@ -1,0 +1,2 @@
+Content images for JEMIX Academy module 1 lesson 1.5.
+Place topic-specific images and diagrams here.
