@@ -2,3 +2,23 @@
 .env
 .salute_token_cache.json
 .venv/
+
+# Temporary build files
+__pycache__/
+**/__pycache__/
+_inspect_*/
+_test_*/
+_scorm_*/
+build/
+output/
+agent_files/
+tools/
+
+# Generated distributions
+dist/
+JEMIX_1_1_20_slides_HD/
+*.zip
+*.pyc
+
+# Temporary images
+a_clean_infographic_slide_collage_design_overall.png
