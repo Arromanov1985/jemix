@@ -1,0 +1,22 @@
+JEMIX Academy Lesson 1.2 - slide 10 dUshe fix
+
+Files added in this branch:
+- voice/lesson_1_2/synthesize_slide10_yandex.py
+- voice/lesson_1_2/slide10_tts_text.txt
+- voice/lesson_1_2/README_slide10_dushe_fix.md
+- voice/lesson_1_2/MANIFEST_slide10_dushe_fix.txt
+
+Local repo-pack also contains:
+- corrected 20-slide PNG ZIP with slide 10 visual fix
+
+Validation performed locally:
+- corrected slides ZIP opens without compression errors
+- corrected slides ZIP contains 20 PNG files
+- corrected slide 10 image was visually checked
+- audio synthesis script passes Python syntax check
+
+Not included in this branch:
+- regenerated slide10.mp3
+- corrected audio ZIP
+- full SCORM ZIP
+- lesson.yml
