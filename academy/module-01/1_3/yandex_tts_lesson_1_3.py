@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import shutil
 import sys
 import tempfile
 import time
@@ -47,7 +48,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--format", choices=("mp3", "oggopus"), default="mp3")
     parser.add_argument("--folder-id", default=os.getenv("YANDEX_FOLDER_ID", ""))
     parser.add_argument("--overwrite", action="store_true")
-    parser.add_argument("--only", help="Только отдельные слайды, например: 1,3,7-10")
+    parser.add_argument(
+        "--only",
+        help="Только отдельные слайды, например: 1,3,7-10",
+    )
     parser.add_argument("--pause", type=float, default=0.3, help="Пауза между запросами.")
     return parser.parse_args()
 
@@ -74,11 +78,11 @@ def load_texts(path: Path) -> dict[str, str]:
     data: Any = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
         raise ValueError("JSON должен быть объектом: slide01 -> текст.")
-    return {
-        str(key): value.strip()
-        for key, value in data.items()
-        if isinstance(value, str) and value.strip()
-    }
+    result: dict[str, str] = {}
+    for key, value in data.items():
+        if isinstance(value, str) and value.strip():
+            result[str(key)] = value.strip()
+    return result
 
 
 def get_auth_headers() -> dict[str, str]:
@@ -129,8 +133,9 @@ def synthesize(
 
     content_type = response.headers.get("Content-Type", "")
     if response.status_code != 200:
+        message = response.text[:1000]
         raise RuntimeError(
-            f"SpeechKit вернул HTTP {response.status_code}: {response.text[:1000]}"
+            f"SpeechKit вернул HTTP {response.status_code}: {message}"
         )
     if "audio" not in content_type and "octet-stream" not in content_type:
         raise RuntimeError(
@@ -140,6 +145,7 @@ def synthesize(
 
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_bytes(response.content)
+
     if destination.stat().st_size < 500:
         raise RuntimeError(f"Слишком маленький аудиофайл: {destination}")
 
@@ -150,7 +156,12 @@ def repack_folder(folder: Path, output_zip: Path) -> None:
     if temp_zip.exists():
         temp_zip.unlink()
 
-    preferred = ["img", "audio", "style-v2.css"]
+    # Порядок близок к эталону 1.2 FINAL.
+    preferred = [
+        "img",
+        "audio",
+        "style-v2.css",
+    ]
     ordered_files: list[Path] = []
 
     for name in preferred:
