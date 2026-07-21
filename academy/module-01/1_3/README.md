@@ -1,51 +1,71 @@
-# Озвучка JEMIX Academy 1.3 через Yandex SpeechKit
+# JEMIX Academy — озвучка урока 1.3 по Voice Standard
 
-## 1. Откройте папку в VS Code
+## Что делает скрипт
 
-Поместите рядом:
+1. Создаёт для 21 слайда:
+   - `slideXX.txt`
+   - `slideXX.ssml`
+   - `slideXX.md`
+2. Создаёт:
+   - `voice_qa.md`
+   - `audio_manifest.yml`
+3. Проверяет:
+   - SSML/XML
+   - длину предложений
+   - технические символы и сокращения
+   - количество акцентов
+   - нейтральность тестов
+   - ориентировочную длительность 30–40 секунд
+4. Генерирует MP3 через Yandex SpeechKit API v1.
+5. При наличии `--scorm` помещает MP3 в папку `audio/` и собирает новый ZIP.
 
-- `yandex_tts_lesson_1_3.py`
-- `voice_texts_1_3.json`
-- `JEMIX_Academy_Lesson_1_3_SCORM_UXv2_FINAL_EXACT.zip`
-
-## 2. Установите библиотеку
+## Установка
 
 ```powershell
 py -m pip install -r requirements.txt
 ```
 
-## 3. Передайте ключ только через переменную окружения
-
-PowerShell, только для текущего окна:
+## Только подготовка сценариев и QA
 
 ```powershell
-$env:YANDEX_API_KEY="ВАШ_API_КЛЮЧ"
+py .\prepare_and_generate_lesson_1_3_voice.py --prepare-only
 ```
 
-## 4. Запустите генерацию
+## Проверка одного слайда
 
 ```powershell
-py .\yandex_tts_lesson_1_3.py `
-  --scorm ".\JEMIX_Academy_Lesson_1_3_SCORM_UXv2_FINAL_EXACT.zip" `
-  --texts ".\voice_texts_1_3.json" `
-  --voice ermil `
-  --emotion good `
-  --speed 1.0 `
-  --overwrite
-```
+$env:YANDEX_API_KEY="НОВЫЙ_КЛЮЧ"
 
-Результат:
-
-`JEMIX_Academy_Lesson_1_3_SCORM_UXv2_FINAL_EXACT_WITH_YANDEX_VOICE.zip`
-
-## Пробная генерация одного экрана
-
-```powershell
-py .\yandex_tts_lesson_1_3.py `
-  --scorm ".\JEMIX_Academy_Lesson_1_3_SCORM_UXv2_FINAL_EXACT.zip" `
+py .\prepare_and_generate_lesson_1_3_voice.py `
   --only 1 `
   --voice ermil `
   --emotion good `
-  --speed 1.0 `
+  --speed 0.92 `
   --overwrite
 ```
+
+## Генерация всех 21 MP3 и сборка SCORM
+
+```powershell
+$env:YANDEX_API_KEY="НОВЫЙ_КЛЮЧ"
+
+$scorm = Get-ChildItem "$HOME\Downloads","$HOME\Desktop" `
+  -Filter "JEMIX_Academy_Lesson_1_3_SCORM_UXv2_FINAL_EXACT.zip" `
+  -File -Recurse -ErrorAction SilentlyContinue |
+  Sort-Object LastWriteTime -Descending |
+  Select-Object -First 1
+
+py .\prepare_and_generate_lesson_1_3_voice.py `
+  --scorm $scorm.FullName `
+  --voice ermil `
+  --emotion good `
+  --speed 0.92 `
+  --overwrite
+```
+
+## Важно
+
+- Не добавляйте реальный API-ключ в файлы репозитория.
+- После синтеза MP3 нужно прослушать.
+- Слова из списка `listen carefully` в `voice_qa.md` проверяются особенно внимательно.
+- Тестовые слайды озвучиваются нейтрально, без акцента на правильном ответе.

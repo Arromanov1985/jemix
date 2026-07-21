@@ -2,3 +2,9 @@
 .env
 .salute_token_cache.json
 .venv/
+
+# JEMIX voice temporary files
+academy/module-01/1_3/scorm_work/
+academy/module-01/1_3/__pycache__/
+academy/module-01/1_3/*.zip
+academy/module-01/1_3/voice/module-01/lesson-1.3/audio/*.mp3

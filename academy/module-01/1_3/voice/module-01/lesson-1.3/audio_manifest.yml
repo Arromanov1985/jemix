@@ -1,0 +1,197 @@
+lesson: '1.3'
+voice_provider: yandex_speechkit_v1
+voice_profile:
+  role: technical_mentor
+  voice: ermil
+  emotion: good
+  speed: 0.92
+slides:
+  - slide: 01
+    title: 'Виды насосов и области применения'
+    type: intro
+    mode: calm
+    text: slide01.txt
+    ssml: slide01.ssml
+    audio: audio/slide01.mp3
+    estimated_duration_sec: 35.8
+    qa: ok
+  - slide: 02
+    title: 'Цели обучения'
+    type: framework
+    mode: calm
+    text: slide02.txt
+    ssml: slide02.ssml
+    audio: audio/slide02.mp3
+    estimated_duration_sec: 33.5
+    qa: ok
+  - slide: 03
+    title: 'Карта выбора насоса'
+    type: scheme
+    mode: calm
+    text: slide03.txt
+    ssml: slide03.ssml
+    audio: audio/slide03.mp3
+    estimated_duration_sec: 33.4
+    qa: ok
+  - slide: 04
+    title: 'Основные области применения'
+    type: scheme
+    mode: calm
+    text: slide04.txt
+    ssml: slide04.ssml
+    audio: audio/slide04.mp3
+    estimated_duration_sec: 35.4
+    qa: ok
+  - slide: 05
+    title: 'Главный принцип выбора'
+    type: theory
+    mode: focus
+    text: slide05.txt
+    ssml: slide05.ssml
+    audio: audio/slide05.mp3
+    estimated_duration_sec: 33.7
+    qa: ok
+  - slide: 06
+    title: 'Квиз: откачка воды'
+    type: check
+    mode: check
+    text: slide06.txt
+    ssml: slide06.ssml
+    audio: audio/slide06.mp3
+    estimated_duration_sec: 35.0
+    qa: ok
+  - slide: 07
+    title: 'Поверхностный или погружной'
+    type: theory
+    mode: calm
+    text: slide07.txt
+    ssml: slide07.ssml
+    audio: audio/slide07.mp3
+    estimated_duration_sec: 33.4
+    qa: ok
+  - slide: 08
+    title: 'Поверхностные и погружные насосы'
+    type: theory
+    mode: focus
+    text: slide08.txt
+    ssml: slide08.ssml
+    audio: audio/slide08.mp3
+    estimated_duration_sec: 35.8
+    qa: ok
+  - slide: 09
+    title: 'Квиз: место установки'
+    type: check
+    mode: check
+    text: slide09.txt
+    ssml: slide09.ssml
+    audio: audio/slide09.mp3
+    estimated_duration_sec: 35.3
+    qa: ok
+  - slide: 10
+    title: 'Чистая вода, грязная вода и стоки'
+    type: theory
+    mode: focus
+    text: slide10.txt
+    ssml: slide10.ssml
+    audio: audio/slide10.mp3
+    estimated_duration_sec: 31.9
+    qa: ok
+  - slide: 11
+    title: 'Насосы для чистой воды'
+    type: theory
+    mode: calm
+    text: slide11.txt
+    ssml: slide11.ssml
+    audio: audio/slide11.mp3
+    estimated_duration_sec: 35.8
+    qa: ok
+  - slide: 12
+    title: 'Дренажные задачи'
+    type: case
+    mode: practice
+    text: slide12.txt
+    ssml: slide12.ssml
+    audio: audio/slide12.mp3
+    estimated_duration_sec: 33.8
+    qa: ok
+  - slide: 13
+    title: 'Фекальные насосы и канализационные установки'
+    type: theory
+    mode: warning
+    text: slide13.txt
+    ssml: slide13.ssml
+    audio: audio/slide13.mp3
+    estimated_duration_sec: 35.6
+    qa: ok
+  - slide: 14
+    title: 'Кейс: санузел ниже стояка'
+    type: case
+    mode: practice
+    text: slide14.txt
+    ssml: slide14.ssml
+    audio: audio/slide14.mp3
+    estimated_duration_sec: 33.4
+    qa: ok
+  - slide: 15
+    title: 'Кейс: недостаточный напор'
+    type: case
+    mode: practice
+    text: slide15.txt
+    ssml: slide15.ssml
+    audio: audio/slide15.mp3
+    estimated_duration_sec: 32.9
+    qa: ok
+  - slide: 16
+    title: 'Алгоритм выбора группы'
+    type: scheme
+    mode: focus
+    text: slide16.txt
+    ssml: slide16.ssml
+    audio: audio/slide16.mp3
+    estimated_duration_sec: 32.4
+    qa: ok
+  - slide: 17
+    title: 'Типовые ошибки выбора'
+    type: error
+    mode: warning
+    text: slide17.txt
+    ssml: slide17.ssml
+    audio: audio/slide17.mp3
+    estimated_duration_sec: 31.9
+    qa: ok
+  - slide: 18
+    title: 'Проверка рабочей среды'
+    type: check
+    mode: check
+    text: slide18.txt
+    ssml: slide18.ssml
+    audio: audio/slide18.mp3
+    estimated_duration_sec: 30.1
+    qa: ok
+  - slide: 19
+    title: 'Итоговый тест: отопление'
+    type: check
+    mode: check
+    text: slide19.txt
+    ssml: slide19.ssml
+    audio: audio/slide19.mp3
+    estimated_duration_sec: 30.0
+    qa: ok
+  - slide: 20
+    title: 'Итоговая проверка алгоритма'
+    type: check
+    mode: check
+    text: slide20.txt
+    ssml: slide20.ssml
+    audio: audio/slide20.mp3
+    estimated_duration_sec: 31.4
+    qa: ok
+  - slide: 21
+    title: 'Итоги урока'
+    type: summary
+    mode: summary
+    text: slide21.txt
+    ssml: slide21.ssml
+    audio: audio/slide21.mp3
+    estimated_duration_sec: 30.0
+    qa: ok
