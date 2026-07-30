@@ -1,0 +1,122 @@
+[
+  {
+    "slide": 1,
+    "file": "audio/slide01.mp3",
+    "words": 72,
+    "estimated_seconds": 29.8
+  },
+  {
+    "slide": 2,
+    "file": "audio/slide02.mp3",
+    "words": 66,
+    "estimated_seconds": 27.3
+  },
+  {
+    "slide": 3,
+    "file": "audio/slide03.mp3",
+    "words": 68,
+    "estimated_seconds": 28.1
+  },
+  {
+    "slide": 4,
+    "file": "audio/slide04.mp3",
+    "words": 72,
+    "estimated_seconds": 29.8
+  },
+  {
+    "slide": 5,
+    "file": "audio/slide05.mp3",
+    "words": 75,
+    "estimated_seconds": 31.0
+  },
+  {
+    "slide": 6,
+    "file": "audio/slide06.mp3",
+    "words": 70,
+    "estimated_seconds": 29.0
+  },
+  {
+    "slide": 7,
+    "file": "audio/slide07.mp3",
+    "words": 69,
+    "estimated_seconds": 28.6
+  },
+  {
+    "slide": 8,
+    "file": "audio/slide08.mp3",
+    "words": 78,
+    "estimated_seconds": 32.3
+  },
+  {
+    "slide": 9,
+    "file": "audio/slide09.mp3",
+    "words": 71,
+    "estimated_seconds": 29.4
+  },
+  {
+    "slide": 10,
+    "file": "audio/slide10.mp3",
+    "words": 71,
+    "estimated_seconds": 29.4
+  },
+  {
+    "slide": 11,
+    "file": "audio/slide11.mp3",
+    "words": 77,
+    "estimated_seconds": 31.9
+  },
+  {
+    "slide": 12,
+    "file": "audio/slide12.mp3",
+    "words": 75,
+    "estimated_seconds": 31.0
+  },
+  {
+    "slide": 13,
+    "file": "audio/slide13.mp3",
+    "words": 70,
+    "estimated_seconds": 29.0
+  },
+  {
+    "slide": 14,
+    "file": "audio/slide14.mp3",
+    "words": 70,
+    "estimated_seconds": 29.0
+  },
+  {
+    "slide": 15,
+    "file": "audio/slide15.mp3",
+    "words": 67,
+    "estimated_seconds": 27.7
+  },
+  {
+    "slide": 16,
+    "file": "audio/slide16.mp3",
+    "words": 66,
+    "estimated_seconds": 27.3
+  },
+  {
+    "slide": 17,
+    "file": "audio/slide17.mp3",
+    "words": 70,
+    "estimated_seconds": 29.0
+  },
+  {
+    "slide": 18,
+    "file": "audio/slide18.mp3",
+    "words": 68,
+    "estimated_seconds": 28.1
+  },
+  {
+    "slide": 19,
+    "file": "audio/slide19.mp3",
+    "words": 71,
+    "estimated_seconds": 29.4
+  },
+  {
+    "slide": 20,
+    "file": "audio/slide20.mp3",
+    "words": 69,
+    "estimated_seconds": 28.6
+  }
+]

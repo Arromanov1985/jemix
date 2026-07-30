@@ -1,0 +1,139 @@
+{
+  "lesson": "2.5",
+  "title": "Типичные неисправности и диагностика",
+  "skipped_slides": [
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "slides": [
+    {
+      "slide": 1,
+      "audio": "audio/slide01.mp3",
+      "script": "voice_scripts/slide01.txt",
+      "ssml": "ssml/slide01.ssml"
+    },
+    {
+      "slide": 2,
+      "audio": "audio/slide02.mp3",
+      "script": "voice_scripts/slide02.txt",
+      "ssml": "ssml/slide02.ssml"
+    },
+    {
+      "slide": 3,
+      "audio": "audio/slide03.mp3",
+      "script": "voice_scripts/slide03.txt",
+      "ssml": "ssml/slide03.ssml"
+    },
+    {
+      "slide": 4,
+      "audio": "audio/slide04.mp3",
+      "script": "voice_scripts/slide04.txt",
+      "ssml": "ssml/slide04.ssml"
+    },
+    {
+      "slide": 5,
+      "audio": "audio/slide05.mp3",
+      "script": "voice_scripts/slide05.txt",
+      "ssml": "ssml/slide05.ssml"
+    },
+    {
+      "slide": 6,
+      "audio": "audio/slide06.mp3",
+      "script": "voice_scripts/slide06.txt",
+      "ssml": "ssml/slide06.ssml"
+    },
+    {
+      "slide": 7,
+      "audio": "audio/slide07.mp3",
+      "script": "voice_scripts/slide07.txt",
+      "ssml": "ssml/slide07.ssml"
+    },
+    {
+      "slide": 8,
+      "audio": "audio/slide08.mp3",
+      "script": "voice_scripts/slide08.txt",
+      "ssml": "ssml/slide08.ssml"
+    },
+    {
+      "slide": 9,
+      "audio": "audio/slide09.mp3",
+      "script": "voice_scripts/slide09.txt",
+      "ssml": "ssml/slide09.ssml"
+    },
+    {
+      "slide": 10,
+      "audio": "audio/slide10.mp3",
+      "script": "voice_scripts/slide10.txt",
+      "ssml": "ssml/slide10.ssml"
+    },
+    {
+      "slide": 11,
+      "audio": "audio/slide11.mp3",
+      "script": "voice_scripts/slide11.txt",
+      "ssml": "ssml/slide11.ssml"
+    },
+    {
+      "slide": 12,
+      "audio": "audio/slide12.mp3",
+      "script": "voice_scripts/slide12.txt",
+      "ssml": "ssml/slide12.ssml"
+    },
+    {
+      "slide": 13,
+      "audio": "audio/slide13.mp3",
+      "script": "voice_scripts/slide13.txt",
+      "ssml": "ssml/slide13.ssml"
+    },
+    {
+      "slide": 14,
+      "audio": "audio/slide14.mp3",
+      "script": "voice_scripts/slide14.txt",
+      "ssml": "ssml/slide14.ssml"
+    },
+    {
+      "slide": 15,
+      "audio": "audio/slide15.mp3",
+      "script": "voice_scripts/slide15.txt",
+      "ssml": "ssml/slide15.ssml"
+    },
+    {
+      "slide": 16,
+      "audio": "audio/slide16.mp3",
+      "script": "voice_scripts/slide16.txt",
+      "ssml": "ssml/slide16.ssml"
+    },
+    {
+      "slide": 17,
+      "audio": "audio/slide17.mp3",
+      "script": "voice_scripts/slide17.txt",
+      "ssml": "ssml/slide17.ssml"
+    },
+    {
+      "slide": 18,
+      "audio": "audio/slide18.mp3",
+      "script": "voice_scripts/slide18.txt",
+      "ssml": "ssml/slide18.ssml"
+    },
+    {
+      "slide": 19,
+      "audio": "audio/slide19.mp3",
+      "script": "voice_scripts/slide19.txt",
+      "ssml": "ssml/slide19.ssml"
+    },
+    {
+      "slide": 20,
+      "audio": "audio/slide20.mp3",
+      "script": "voice_scripts/slide20.txt",
+      "ssml": "ssml/slide20.ssml"
+    },
+    {
+      "slide": 26,
+      "audio": "audio/slide26.mp3",
+      "script": "voice_scripts/slide26.txt",
+      "ssml": "ssml/slide26.ssml"
+    }
+  ]
+}

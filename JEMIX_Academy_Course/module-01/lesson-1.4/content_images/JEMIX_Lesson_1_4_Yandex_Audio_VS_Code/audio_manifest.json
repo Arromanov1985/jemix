@@ -1,0 +1,169 @@
+{
+  "lesson": "1.4",
+  "title": "Базовый алгоритм подбора насоса",
+  "voice": "ermil",
+  "emotion": "good",
+  "speed": 0.95,
+  "slides": [
+    {
+      "slide": 1,
+      "title": "Логика подбора насоса",
+      "text_file": "voice_scripts/slide01.txt",
+      "ssml_file": "ssml/slide01.ssml",
+      "audio_file": "audio/slide01.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 2,
+      "title": "Цели обучения",
+      "text_file": "voice_scripts/slide02.txt",
+      "ssml_file": "ssml/slide02.ssml",
+      "audio_file": "audio/slide02.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 3,
+      "title": "Почему нельзя выбирать только по мощности",
+      "text_file": "voice_scripts/slide03.txt",
+      "ssml_file": "ssml/slide03.ssml",
+      "audio_file": "audio/slide03.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 4,
+      "title": "Порядок подбора насоса",
+      "text_file": "voice_scripts/slide04.txt",
+      "ssml_file": "ssml/slide04.ssml",
+      "audio_file": "audio/slide04.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 5,
+      "title": "Шаг 1. Определяем задачу",
+      "text_file": "voice_scripts/slide05.txt",
+      "ssml_file": "ssml/slide05.ssml",
+      "audio_file": "audio/slide05.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 6,
+      "title": "Шаг 2. Анализируем среду",
+      "text_file": "voice_scripts/slide06.txt",
+      "ssml_file": "ssml/slide06.ssml",
+      "audio_file": "audio/slide06.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 7,
+      "title": "Шаг 3. Рассчитываем расход",
+      "text_file": "voice_scripts/slide07.txt",
+      "ssml_file": "ssml/slide07.ssml",
+      "audio_file": "audio/slide07.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 8,
+      "title": "Шаг 4. Рассчитываем напор",
+      "text_file": "voice_scripts/slide08.txt",
+      "ssml_file": "ssml/slide08.ssml",
+      "audio_file": "audio/slide08.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 9,
+      "title": "Шаг 5. Подбираем комплект",
+      "text_file": "voice_scripts/slide09.txt",
+      "ssml_file": "ssml/slide09.ssml",
+      "audio_file": "audio/slide09.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 10,
+      "title": "Типовые ошибки подбора",
+      "text_file": "voice_scripts/slide10.txt",
+      "ssml_file": "ssml/slide10.ssml",
+      "audio_file": "audio/slide10.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 11,
+      "title": "Что обязательно проверить",
+      "text_file": "voice_scripts/slide11.txt",
+      "ssml_file": "ssml/slide11.ssml",
+      "audio_file": "audio/slide11.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 12,
+      "title": "Чек-лист первого разговора",
+      "text_file": "voice_scripts/slide12.txt",
+      "ssml_file": "ssml/slide12.ssml",
+      "audio_file": "audio/slide12.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 13,
+      "title": "Подбор для водоснабжения дома",
+      "text_file": "voice_scripts/slide13.txt",
+      "ssml_file": "ssml/slide13.ssml",
+      "audio_file": "audio/slide13.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 14,
+      "title": "Подбор для дренажа и грязной воды",
+      "text_file": "voice_scripts/slide14.txt",
+      "ssml_file": "ssml/slide14.ssml",
+      "audio_file": "audio/slide14.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 15,
+      "title": "Подбор для циркуляции и отопления",
+      "text_file": "voice_scripts/slide15.txt",
+      "ssml_file": "ssml/slide15.ssml",
+      "audio_file": "audio/slide15.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 16,
+      "title": "Подбор для повышения давления",
+      "text_file": "voice_scripts/slide16.txt",
+      "ssml_file": "ssml/slide16.ssml",
+      "audio_file": "audio/slide16.mp3",
+      "target_duration_sec": "30-40"
+    },
+    {
+      "slide": 17,
+      "title": "Квиз",
+      "text_file": "voice_scripts/slide17.txt",
+      "ssml_file": "ssml/slide17.ssml",
+      "audio_file": "audio/slide17.mp3",
+      "target_duration_sec": "25-35"
+    },
+    {
+      "slide": 18,
+      "title": "Итоговый тест 1",
+      "text_file": "voice_scripts/slide18.txt",
+      "ssml_file": "ssml/slide18.ssml",
+      "audio_file": "audio/slide18.mp3",
+      "target_duration_sec": "25-35"
+    },
+    {
+      "slide": 19,
+      "title": "Итоговый тест 2",
+      "text_file": "voice_scripts/slide19.txt",
+      "ssml_file": "ssml/slide19.ssml",
+      "audio_file": "audio/slide19.mp3",
+      "target_duration_sec": "25-35"
+    },
+    {
+      "slide": 20,
+      "title": "Ключевой вывод урока",
+      "text_file": "voice_scripts/slide20.txt",
+      "ssml_file": "ssml/slide20.ssml",
+      "audio_file": "audio/slide20.mp3",
+      "target_duration_sec": "30-40"
+    }
+  ]
+}

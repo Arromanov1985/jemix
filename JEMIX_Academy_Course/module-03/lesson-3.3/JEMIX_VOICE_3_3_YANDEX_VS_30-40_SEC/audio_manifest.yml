@@ -1,0 +1,202 @@
+lesson: '3.3'
+provider: Yandex SpeechKit API v1
+voice: ermil
+emotion: good
+speed: 1.0
+slides:
+- slide: '01'
+  title: Поверхностные насосы JEMIX
+  type: intro
+  text: scripts/slide01.txt
+  ssml: scripts/slide01.ssml
+  audio: audio/slide01.mp3
+  qa: pending
+- slide: '02'
+  title: Что нужно понять
+  type: goals
+  text: scripts/slide02.txt
+  ssml: scripts/slide02.ssml
+  audio: audio/slide02.mp3
+  qa: pending
+- slide: '03'
+  title: Что такое поверхностный насос
+  type: theory
+  text: scripts/slide03.txt
+  ssml: scripts/slide03.ssml
+  audio: audio/slide03.mp3
+  qa: pending
+- slide: '04'
+  title: Когда поверхностный насос подходит
+  type: scheme
+  text: scripts/slide04.txt
+  ssml: scripts/slide04.ssml
+  audio: audio/slide04.mp3
+  qa: pending
+- slide: '05'
+  title: Что уточнить перед подбором
+  type: questions
+  text: scripts/slide05.txt
+  ssml: scripts/slide05.ssml
+  audio: audio/slide05.mp3
+  qa: pending
+- slide: '06'
+  title: Ключевые характеристики
+  type: theory
+  text: scripts/slide06.txt
+  ssml: scripts/slide06.ssml
+  audio: audio/slide06.mp3
+  qa: pending
+- slide: '07'
+  title: Источник воды и глубина всасывания
+  type: theory
+  text: scripts/slide07.txt
+  ssml: scripts/slide07.ssml
+  audio: audio/slide07.mp3
+  qa: pending
+- slide: 08
+  title: Расход воды и производительность
+  type: calculation
+  text: scripts/slide08.txt
+  ssml: scripts/slide08.ssml
+  audio: audio/slide08.mp3
+  qa: pending
+- slide: 09
+  title: Напор и высота подъёма
+  type: theory
+  text: scripts/slide09.txt
+  ssml: scripts/slide09.ssml
+  audio: audio/slide09.mp3
+  qa: pending
+- slide: '10'
+  title: Основные группы поверхностных насосов
+  type: groups
+  text: scripts/slide10.txt
+  ssml: scripts/slide10.ssml
+  audio: audio/slide10.mp3
+  qa: pending
+- slide: '11'
+  title: Вихревые насосы ПНВ
+  type: series
+  text: scripts/slide11.txt
+  ssml: scripts/slide11.ssml
+  audio: audio/slide11.mp3
+  qa: pending
+- slide: '12'
+  title: Насосы ППН
+  type: series
+  text: scripts/slide12.txt
+  ssml: scripts/slide12.ssml
+  audio: audio/slide12.mp3
+  qa: pending
+- slide: '13'
+  title: Центробежные насосы ПЦН
+  type: series
+  text: scripts/slide13.txt
+  ssml: scripts/slide13.ssml
+  audio: audio/slide13.mp3
+  qa: pending
+- slide: '14'
+  title: Насосы ПЦН/Н
+  type: series
+  text: scripts/slide14.txt
+  ssml: scripts/slide14.ssml
+  audio: audio/slide14.mp3
+  qa: pending
+- slide: '15'
+  title: Насосы ПЦН/П
+  type: series
+  text: scripts/slide15.txt
+  ssml: scripts/slide15.ssml
+  audio: audio/slide15.mp3
+  qa: pending
+- slide: '16'
+  title: Модельный ряд ПНВ
+  type: models
+  text: scripts/slide16.txt
+  ssml: scripts/slide16.ssml
+  audio: audio/slide16.mp3
+  qa: pending
+- slide: '17'
+  title: Модельный ряд ППН
+  type: models
+  text: scripts/slide17.txt
+  ssml: scripts/slide17.ssml
+  audio: audio/slide17.mp3
+  qa: pending
+- slide: '18'
+  title: Модельный ряд ПЦН
+  type: models
+  text: scripts/slide18.txt
+  ssml: scripts/slide18.ssml
+  audio: audio/slide18.mp3
+  qa: pending
+- slide: '19'
+  title: Модельный ряд ПЦН/Н
+  type: models
+  text: scripts/slide19.txt
+  ssml: scripts/slide19.ssml
+  audio: audio/slide19.mp3
+  qa: pending
+- slide: '20'
+  title: Модельный ряд ПЦН/П
+  type: models
+  text: scripts/slide20.txt
+  ssml: scripts/slide20.ssml
+  audio: audio/slide20.mp3
+  qa: pending
+- slide: '21'
+  title: Алгоритм подбора
+  type: scheme
+  text: scripts/slide21.txt
+  ssml: scripts/slide21.ssml
+  audio: audio/slide21.mp3
+  qa: pending
+- slide: '22'
+  title: Практический кейс
+  type: case
+  text: scripts/slide22.txt
+  ssml: scripts/slide22.ssml
+  audio: audio/slide22.mp3
+  qa: pending
+- slide: '23'
+  title: Итоговый тест — вопрос 1
+  type: test
+  text: scripts/slide23.txt
+  ssml: scripts/slide23.ssml
+  audio: audio/slide23.mp3
+  qa: pending
+- slide: '24'
+  title: Итоговый тест — вопрос 2
+  type: test
+  text: scripts/slide24.txt
+  ssml: scripts/slide24.ssml
+  audio: audio/slide24.mp3
+  qa: pending
+- slide: '25'
+  title: Итоговый тест — вопрос 3
+  type: test
+  text: scripts/slide25.txt
+  ssml: scripts/slide25.ssml
+  audio: audio/slide25.mp3
+  qa: pending
+- slide: '26'
+  title: Итоговый тест — вопрос 4
+  type: test
+  text: scripts/slide26.txt
+  ssml: scripts/slide26.ssml
+  audio: audio/slide26.mp3
+  qa: pending
+- slide: '27'
+  title: Итоговый тест — вопрос 5
+  type: test
+  text: scripts/slide27.txt
+  ssml: scripts/slide27.ssml
+  audio: audio/slide27.mp3
+  qa: pending
+- slide: '28'
+  title: Итоги урока 3.3
+  type: summary
+  text: scripts/slide28.txt
+  ssml: scripts/slide28.ssml
+  audio: audio/slide28.mp3
+  qa: pending

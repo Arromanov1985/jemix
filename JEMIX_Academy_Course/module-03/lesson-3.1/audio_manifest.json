@@ -1,0 +1,182 @@
+{
+  "lesson": "3.1",
+  "voice_slides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    26
+  ],
+  "silent_slides": [
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "items": [
+    {
+      "slide": 1,
+      "audio_file": "audio/slide01.mp3",
+      "script_file": "voice_scripts/slide01.txt",
+      "words": 54,
+      "estimated_seconds_at_2.2_wps": 24.5
+    },
+    {
+      "slide": 2,
+      "audio_file": "audio/slide02.mp3",
+      "script_file": "voice_scripts/slide02.txt",
+      "words": 53,
+      "estimated_seconds_at_2.2_wps": 24.1
+    },
+    {
+      "slide": 3,
+      "audio_file": "audio/slide03.mp3",
+      "script_file": "voice_scripts/slide03.txt",
+      "words": 52,
+      "estimated_seconds_at_2.2_wps": 23.6
+    },
+    {
+      "slide": 4,
+      "audio_file": "audio/slide04.mp3",
+      "script_file": "voice_scripts/slide04.txt",
+      "words": 49,
+      "estimated_seconds_at_2.2_wps": 22.3
+    },
+    {
+      "slide": 5,
+      "audio_file": "audio/slide05.mp3",
+      "script_file": "voice_scripts/slide05.txt",
+      "words": 55,
+      "estimated_seconds_at_2.2_wps": 25.0
+    },
+    {
+      "slide": 6,
+      "audio_file": "audio/slide06.mp3",
+      "script_file": "voice_scripts/slide06.txt",
+      "words": 55,
+      "estimated_seconds_at_2.2_wps": 25.0
+    },
+    {
+      "slide": 7,
+      "audio_file": "audio/slide07.mp3",
+      "script_file": "voice_scripts/slide07.txt",
+      "words": 54,
+      "estimated_seconds_at_2.2_wps": 24.5
+    },
+    {
+      "slide": 8,
+      "audio_file": "audio/slide08.mp3",
+      "script_file": "voice_scripts/slide08.txt",
+      "words": 54,
+      "estimated_seconds_at_2.2_wps": 24.5
+    },
+    {
+      "slide": 9,
+      "audio_file": "audio/slide09.mp3",
+      "script_file": "voice_scripts/slide09.txt",
+      "words": 51,
+      "estimated_seconds_at_2.2_wps": 23.2
+    },
+    {
+      "slide": 10,
+      "audio_file": "audio/slide10.mp3",
+      "script_file": "voice_scripts/slide10.txt",
+      "words": 49,
+      "estimated_seconds_at_2.2_wps": 22.3
+    },
+    {
+      "slide": 11,
+      "audio_file": "audio/slide11.mp3",
+      "script_file": "voice_scripts/slide11.txt",
+      "words": 47,
+      "estimated_seconds_at_2.2_wps": 21.4
+    },
+    {
+      "slide": 12,
+      "audio_file": "audio/slide12.mp3",
+      "script_file": "voice_scripts/slide12.txt",
+      "words": 50,
+      "estimated_seconds_at_2.2_wps": 22.7
+    },
+    {
+      "slide": 13,
+      "audio_file": "audio/slide13.mp3",
+      "script_file": "voice_scripts/slide13.txt",
+      "words": 49,
+      "estimated_seconds_at_2.2_wps": 22.3
+    },
+    {
+      "slide": 14,
+      "audio_file": "audio/slide14.mp3",
+      "script_file": "voice_scripts/slide14.txt",
+      "words": 47,
+      "estimated_seconds_at_2.2_wps": 21.4
+    },
+    {
+      "slide": 15,
+      "audio_file": "audio/slide15.mp3",
+      "script_file": "voice_scripts/slide15.txt",
+      "words": 50,
+      "estimated_seconds_at_2.2_wps": 22.7
+    },
+    {
+      "slide": 16,
+      "audio_file": "audio/slide16.mp3",
+      "script_file": "voice_scripts/slide16.txt",
+      "words": 49,
+      "estimated_seconds_at_2.2_wps": 22.3
+    },
+    {
+      "slide": 17,
+      "audio_file": "audio/slide17.mp3",
+      "script_file": "voice_scripts/slide17.txt",
+      "words": 48,
+      "estimated_seconds_at_2.2_wps": 21.8
+    },
+    {
+      "slide": 18,
+      "audio_file": "audio/slide18.mp3",
+      "script_file": "voice_scripts/slide18.txt",
+      "words": 51,
+      "estimated_seconds_at_2.2_wps": 23.2
+    },
+    {
+      "slide": 19,
+      "audio_file": "audio/slide19.mp3",
+      "script_file": "voice_scripts/slide19.txt",
+      "words": 45,
+      "estimated_seconds_at_2.2_wps": 20.5
+    },
+    {
+      "slide": 20,
+      "audio_file": "audio/slide20.mp3",
+      "script_file": "voice_scripts/slide20.txt",
+      "words": 51,
+      "estimated_seconds_at_2.2_wps": 23.2
+    },
+    {
+      "slide": 26,
+      "audio_file": "audio/slide26.mp3",
+      "script_file": "voice_scripts/slide26.txt",
+      "words": 49,
+      "estimated_seconds_at_2.2_wps": 22.3
+    }
+  ]
+}
